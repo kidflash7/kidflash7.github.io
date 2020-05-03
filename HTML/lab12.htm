@@ -1,0 +1,115 @@
+<html>
+<head><title> Frames II </title></head>
+<body bgcolor=white text=blue>
+<b>
+
+<font color=black>
+<center>
+<h2> FRAMES </h2>
+</center>
+</font>
+
+<p>
+<font color=black>
+CREATE A SIMPLE FRAMESET IN ROWS: <br>
+</font>
+&lt frameset rows="a,b" &gt <br>                       
+&lt frame name="first_row" src="row1.html" &gt <br> 
+&lt frame name="sec_row" src="row2.html" &gt <br>   
+&lt /frameset &gt <br>
+
+<p>
+<font color=black>
+CREATE A SIMPLE FRAMESET IN COLUMNS: <br>
+</font>
+&lt frameset cols="d,e" &gt <br>                       
+&lt frame name="first_col" src="col1.html" &gt <br> 
+&lt frame name="sec_col" src="col2.html" &gt <br>   
+&lt /frameset &gt <br>
+
+<p>
+<font color=black>
+CREATE A FRAMESET with 3 ROWS & 2 COLS in 2nd ROW only: <br>
+</font>
+&lt frameset rows="a,b,c" &gt <br>                       
+&lt frame name="first_row" src="row1.html" &gt <br>
+&lt frameset cols="d,e" &gt <br>
+&lt frame name="row2col1" src="row2col1.html" &gt <br>
+&lt frame name="row2col2" src="row2col2.html" &gt <br>
+&lt /frameset &gt <font size=1 color=black> this ends frameset for columns <br>
+</font>
+&lt frame name="third_row" src="row3.html" &gt <br>
+&lt /frameset &gt <font size=1 color=black> this ends frameset for rows <br>
+</font>
+
+<p>
+<font color=black>
+ADJUST A FRAME's MARGINS: <br>
+</font>
+&lt frameset rows="a,b" &gt <br>                       
+&lt frame name="row1" src="row1.htm" marginwidth=w marginheight=h &gt <br>
+&lt frame name="row2" src="row2.htm" marginwidth=w marginheight=h &gt <br>
+&lt /frameset &gt <br>
+
+<p>
+<font color=black>
+TO MAKE ALL THE BORDERS DISAPPEAR: <br>
+</font>
+&lt frameset rows="a,b" frameborder=0 &gt <br>                       
+
+<p>
+<font color=black>
+TO MAKE ONLY THE VERTICAL BORDERS DISAPPEAR: <br>
+</font>
+&lt frame name="name" src="contents.htm" frameborder=0 &gt <br>                       
+
+<p>
+<font color=black>
+TO TARGET A LINK TO A PARTICULAR FRAME: <br>
+</font>
+&lt a href="contents.htm" target="name_of_frame" &gt <br>                       
+
+<p>
+<font color=black>
+TO TARGET A LINK TO A SPECIAL SPOT: <br>
+</font>
+&lt a href="contents.htm" target="_blank" &gt 
+<font size=2 color=black> open in a new tab </font><br> 
+&lt a href="contents.htm" target="_self" &gt 
+<font size=2 color=black> open in frame that contains link</font><br>
+&lt a href="contents.htm" target="_top" &gt 
+<font size=2 color=black> open in place of existing page </font><br>
+&lt a href="contents.htm" target="_parent" &gt 
+<font size=2 color=black> open in frame that contains current frameset </font><br>
+
+<p>
+
+<table border=2 bordercolor=red>
+<tr bgcolor=yellow>
+   <td> NOTE: </td>
+   <td> a,b,c: height of rows </td>
+   <td> d,e: width of columns </td>
+</tr>
+<tr bgcolor=yellow>
+   <td colspan=3> height, width: pixels, %, or * (rest of page) </td>
+</tr>
+</table>
+<br>
+</b>
+<font size=3 color=black>
+They say in the near future web browsers won't support frames, but
+until that day comes I will use them to make my big webpages read
+like a book with chapters.  I'm partial to a left vertical navigational
+bar.  This is the only thing frames are good for:  letting the side
+navigational bar stay the same and just put new pages in the main frame.
+<p>
+If you think you want to go into coding you should probably use HTML5
+and CSS and figure out a way to make a menu bar without frames.
+</font>
+<p>
+<p>
+</b>
+
+
+</body>
+</html>

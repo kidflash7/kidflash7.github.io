@@ -1,0 +1,40 @@
+<html>
+<head>
+<title> A Frame within a Frame </title>
+</head>
+<body bgcolor=white text=blue>
+    
+<font color=black size=5>
+<center>
+    Divide your page into FRAMES page <br>
+    "Index.htm"
+</center>
+</font>
+
+<p>
+<b>
+&lt html &gt <br>
+&lt head &gt &lt title &gt .... &lt /title &gt &lt /head &gt <br>
+&lt frameset cols="20%,*" border=0 frameborder=0 &gt <br>
+&lt frame name=nav  src="nav.htm" &gt <br>
+&lt frame name=main  src="main.htm" &gt <br>
+&lt /frameset &gt <br>
+&lt /html &gt
+</b>
+<p>
+<font size=3 color=black>
+In your Index page you declare all your frames. This page has two frames
+your menu button frame and the main frame. I made it like my Tutorial
+into columns, 20% of the page is taken up by "nav.htm" and the rest of
+the page is taken up by "main.htm".  You could of done it by rows and
+you get a menu on top or the buttom like the blue menu bar.
+<p>
+You should call your Frame page "index.htm", because when you load 
+your page on a server, by default your sever will load up "index.htm"
+as your starting page.  All your Frame page does is bring up 2 webpages
+in different parts of the screen. 
+</font>
+
+</body>
+</html>
+ 

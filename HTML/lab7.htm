@@ -1,0 +1,78 @@
+<html>
+<head>
+<title> Links </title>
+</head>
+<body bgcolor=white text=blue link=black alink=yellow vlink=black>
+<b>
+&lt html &gt <br>  
+&lt head &gt 
+&lt title &gt LINKING to other parts of your page &lt /title &gt 
+&lt /head &gt <br>
+&lt body bgcolor=white text=blue link=blue alink=yellow vlink=red &gt 
+<br>
+</b>
+<hr size=3 width=85% direction=center color=black noshade>
+<font color=black size=3>
+<b> "Lance LINK Detective Chimp":</b>
+<br>
+Now you want to make a page that consists of several HTM files, so 
+we need to create links to the other HTM files that are part of your
+big page.  Links are the topics you've been clicking on in the left
+frame in this tutorial. You click on them and they bring up a new HTM
+file in the right frame.  You can make anything on your page a link:
+images, text, you name it.  First I'll show 
+you how to make a part of your text a <a href="colors.htm">link</a>.
+Notice that the link is underlined, this is automatic with text, that
+way it'll stand out as a link even if the link is the same color as
+the surrounding text.  I made it blue so it'll 
+stand out as a link when you click it, it becomes yellow for an instant
+and then when you come back to the page it is red.  This is done in the 
+<b> body </b> tag with <b>link</b>, <b>alink</b>, <b>vlink</b>.  Ok I'll 
+show you how it is done in the HTML that follows:
+</font>
+<hr size=3 width=85% direction=center color=black noshade>
+<b>
+&lt a href="url_address" &gt
+<font color=black size=3>
+<a href="gumby.htm"> the text you want clickable </a>
+</font>
+&lt /a &gt
+</b>
+
+<hr size=3 width=85% direction=center color=black noshade>
+<font color=black size=3>
+The <b>"url_address"</b> is where the new page is located and the name 
+of the page.  
+<b>A local link (link to the same web site) is specified with a relative 
+URL (without http://www....). </b> My new page is in the same directory so I 
+just called the name of the HTM file I want to come up when they click
+on the link.  But suppose I want to call on a page <b>"colors.htm"</b> that 
+is in a folder called <b>"files"</b> I would access it by the following 
+local "url_address" <b>"files/colors.htm"</b>.  Now let's make an image a link...
+</font>
+
+<hr size=3 width=85% direction=center color=black noshade>
+<a href="clint.htm">
+<img src="images/clint5.jpg" height=30% align=left>
+</a>
+<b>
+&lt a href="new_page.htm" &gt <br>
+&lt img src="image_name.jpg"  &gt <br>
+&lt /a &gt <br>
+&lt /body &gt <br>
+&lt /html &gt <br>
+</b>
+<br clear=all> 
+<p>
+<font color=black size=3>
+<b>
+LAB 6:
+</b>
+<br>
+Make a page that links to another page.  Make sure you have a link back
+to your original page.  For your next LAB make sure you click on EastWood, Baby.
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,233 @@
+<html>
+<head>
+   <title> Tables I</title>
+</head>
+<body bgcolor=white text=black>
+
+   <center>
+   <table border=5 cellspacing=5 cellpadding=5>
+   <caption> Caption Statement for Table </caption>
+   <tr>
+      <td> <br> </td>
+      <th> Col 1 Header </th>
+      <th> Col 2 Header </th>
+      <th> Col 3 Header </th>
+   </tr>
+
+   <tr>
+      <th> Row 1 Header </th>
+      <td> Data col 1 row 1</td>
+      <td> Data col 2 row 1</td>
+      <td> Data col 3 row 1</td>
+   </tr>
+
+   <tr> 
+      <th> Row 2 Header </th>
+      <td> Data col 1 row 2 </td>
+      <td> Data col 2 row 2</td>
+      <td> Data col 3 row 2</td>
+   </tr>
+
+   <tr>
+      <th> Row 3 Header </th>
+      <td> Data col 1 row 3</td>
+      <td> Data col 2 row 3</td>
+      <td> Data col 3 row 3</td>
+   </tr>
+   </table>
+   </center>
+<font size=3>
+<p>
+This is an example of a simple table.  Tables are real versitile, you
+can put just about anything in for the Data of each cell: text, images,
+etc.  Headers are optional and you don't have to use borders so cells 
+are lined up and it doesn't look like you are using a table.  Remember
+that a CAPTION and HEADERS are optional.  
+<p>
+When things are lined up in rows or columns tables are used, take a look
+at my side menu bar, it's a table with no borders.
+<p>
+I'm now gonna for go all the
+other elements of the web page and just give you the new stuff in 
+<font color=blue> blue
+</font>.....</font>
+<p>
+</font>
+
+<b>
+CREATE A SIMPLE TABLE WITH HEADERS ACROSS THE TOP: <br>
+<font color=blue>
+&lt table border=5(number of pixels) &gt <br>
+&lt caption &gt 
+</font> </b> the caption statement to use with table 
+<b><font color=blue> &lt /caption &gt <br>
+&lt tr &gt </font></b>
+(this defines the beginning of the first row) <br>
+<b><font color=blue>      
+&lt th &gt 
+</font></b>header for first column 
+<b><font color=blue>
+&lt /th &gt <br>
+&lt th &gt 
+</font></b>header for the second column 
+<b><font color=blue>
+&lt /th &gt <br>
+</font></b>
+(repeat <b><font color=blue> &lt th &gt ... &lt /th &gt 
+</font></b> for each column) <br>
+<b><font color=blue>
+&lt /tr &gt <br>
+&lt tr &gt </font></b> 
+(this defines the beginning of the second row) <br>
+<b><font color=blue>
+&lt td &gt </font></b>
+put in table data of cell in first column 
+<b><font color=blue> 
+&lt /td &gt <br>
+</font></b> (repeat 
+<b><font color=blue>
+&lt td &gt ..... &lt /td &gt 
+</font></b> for each column) <br>
+<b><font color=blue>
+&lt /tr &gt <br>
+</font></b> (repeat 
+<b><font color=blue>
+&lt tr &gt ... &lt /tr &gt 
+</font></b>for each row) <br>
+<b><font color=blue>
+&lt /table &gt
+</font></b>
+
+<p>
+<b>
+CREATE A SIMPLE TABLE WITH HEADERS ALONG THE LEFT SIDE: <br>
+<font color=blue>
+&lt table &gt <br>
+&lt tr &gt </font></b>
+(this defines the beginning of the first row) <br>
+<b><font color=blue>      
+&lt th &gt 
+</font></b>header for first row
+<b><font color=blue>
+&lt /th &gt <br>
+&lt td &gt </font></b>
+table data of cell in first column
+<b><font color=blue>
+&lt /td &gt <br> </font> </b>
+(repeat <b><font color=blue> &lt td &gt ... &lt /td &gt 
+</font></b> for each column) <br>
+<b><font color=blue>
+&lt /tr &gt <br>
+&lt tr &gt </font></b> 
+(this defines the beginning of the second row) <br>
+<b><font color=blue>
+&lt th &gt 
+</font></b>header for the second row
+<b><font color=blue>
+&lt /th &gt <br>
+</font></b>
+<b><font color=blue>
+&lt td &gt </font></b>
+put in table data of cell in first column second row 
+<b><font color=blue> 
+&lt /td &gt <br>
+</font></b> (repeat 
+<b><font color=blue>
+&lt td &gt ..... &lt /td &gt 
+</font></b> for each column) <br>
+<b><font color=blue>
+&lt /tr &gt <br>
+</font></b> (repeat 
+<b><font color=blue>
+&lt tr &gt 
+</font></b> and also
+<b><font color=blue>
+&lt th &gt ... &lt /th &gt 
+</font></b> for each row) <br>
+<b><font color=blue>
+</font></b> ( <b><font color=blue> &lt td &gt ... &lt /td &gt 
+</font></b>for each column) <br>
+<b><font color=blue>
+&lt /tr &gt <br> 
+&lt /table &gt
+</font></b>
+
+<p>
+<font size=3>
+<b>
+You can also combine both methods and have headers on top and to the
+left of your data cells. The following is a simple example of a two
+row three column table with headers at the top of each column:
+</b>
+</font>
+<p>
+<b>
+<font color=blue>
+&lt table border=5 cellspacing=5 cellpading=4 
+          width=70% bordercolor=black &gt <br>
+   
+   &lt tr align=center &gt <br>
+      &lt th &gt East Coast &lt /th &gt <br>
+      &lt th &gt West Coast &lt /th &gt <br>
+      &lt th &gt No Coast &lt /th &gt <br>
+   &lt /tr &gt <br>
+
+   &lt tr align=center &gt <br>
+      &lt td &gt 200 &lt /td &gt <br>
+      &lt td &gt 100 &lt /td &gt <br>
+      &lt td &gt 10 &lt /td &gt <br>
+   &lt /tr &gt <br>
+
+   &lt tr align=center &gt <br>
+      &lt td &gt 102 &lt /td &gt <br>
+      &lt td &gt 205 &lt /td &gt <br>
+      &lt td &gt 3 &lt /td &gt <br>
+   &lt /tr &gt <br>
+
+   &lt /table &gt <br>
+</font>
+</b>
+   
+
+<p>
+</b>
+<font color=black size=3>
+<b>
+LAB 9A:
+</b>
+<br>
+Make a simple 3(Row) x 4(Col) table that looks like:  <img src = "images/table.png">
+
+<p>
+
+
+<b>
+LAB 9B:
+</b>
+<br>
+Make a MULTIPLICATION TABLE page.  If you don't know what an OLD SCHOOL 
+times table is, refer to the inside cover of a Pee-Chee folder.  Make
+sure you include a caption statement for your table and also include
+borders in your table.  Before you attempt
+this lab you should make a simple table first, to get the hang of tables.
+Refer to Tables II to get more information about tables, borders, and colors.
+Needs to be at least a 10x10 Mult Table.
+<br><br>
+<b>Note:</b>  
+ Pee-Chee is one of the short forms of an old skool term for <b>Kool</b>.
+ Do you know what the full version of this word is (Pee-Chee-______-_-____).
+ Do you know all the short forms of this cool sayin'?
+
+<p>
+
+<b>
+LAB 9C (Extra Credit):
+</b>
+<br>
+Make the Bell Schedule for YHS in nice tables, both Red Week and Gold Week regular schedule
+
+
+
+</body>
+</html>
+
