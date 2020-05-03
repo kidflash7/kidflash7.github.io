@@ -1,0 +1,377 @@
+<!-- FORMS: 
+Example of a form that uses most form components:
+TEXT BOXES - RADIO BUTTONS - CHECKED BOXES
+TEXT BLOCKS - BUTTONS
+with some JavaScript BABY
+-->
+
+<html>
+<head>
+    
+   <title> Boomer Sooner Store </title>
+
+<script language="JavaScript">
+
+var cost, tax, gtotal, order, shipping, i;
+
+function revieworder()
+{
+   grandtotal();
+   alert(
+   "Sooner Store Order \n \n" +
+   orderform.First.value + " " + orderform.Last.value + "\n" + 
+   orderform.Address.value + "\n" +
+   orderform.City.value + ", " + orderform.State.value + " " + orderform.Zip.value + "\n\n" +
+   "Order: \n" + order + "\n" +
+
+
+   "Total............   $" + cost + "\n" +
+   "Tax..............   $" + tax + "\n" +
+   "Shipping......   $" + shipping + "\n" +
+   "--------------------------------------\n" +
+   "Grand Total    $" + gtotal + "\n\n" 
+   );
+}
+   
+
+function tally()
+{
+   cost = 0;
+   order = "";
+
+   if (document.orderform.Item1.checked) 
+   { cost = cost + 14.99;    
+     order = order+orderform.Item1.value + "\n";
+   }
+        
+   if (document.orderform.Item2.checked) 
+   { cost = cost + 17.50;    
+     order = order+orderform.Item2.value + "\n";
+   } 
+
+   if (document.orderform.Item3.checked) 
+   { cost = cost + 12.50;     
+     order = order+orderform.Item3.value + "\n";
+   }
+
+   if (document.orderform.Item4.checked) 
+   { cost = cost + 35.00;               
+     order = order+orderform.Item4.value + "\n";
+   }
+
+   if (document.orderform.Item5.checked) 
+   { cost = cost + 15.00; 
+     order = order+orderform.Item5.value + "\n";   
+   }
+   
+   if (document.orderform.Item6.checked) 
+   { cost = cost + 99.20;    
+     order = order+orderform.Item6.value + "\n";
+   }
+   
+   if (document.orderform.Item7.checked) 
+   { cost = cost + 5.99; 
+     order = order+orderform.Item7.value + "\n";  
+   }
+   
+   if (document.orderform.Item8.checked) 
+   { cost = cost + 15.77;  
+     order = order+orderform.Item8.value + "\n";    
+   }
+   
+   if (document.orderform.Item9.checked) 
+   {  cost = cost + 16.40;    
+      order = order+orderform.Item9.value + "\n";           
+   }
+
+   if (document.orderform.Item10.checked) 
+   {  cost = cost + 11.77;    
+      order = order+orderform.Item10.value + "\n";           
+   }
+
+   if (document.orderform.Item11.checked) 
+   {  cost = cost + 16.50;    
+      order = order+orderform.Item11.value + "\n";           
+   }
+
+   if (document.orderform.Item12.checked) 
+   {  cost = cost + 17.99;    
+      order = order+orderform.Item12.value + "\n";           
+   }
+
+   cost = dollar(cost);
+   document.orderform.total.value = "$" + cost;
+}
+
+
+function grandtotal()
+{
+
+   tax = (cost * 0.0825);
+   for(i=0; i<4; i++)
+   {
+      if(orderform.Ship[i].checked)
+      {
+         shipping=orderform.Ship[i].value;
+      }
+   }
+
+   cost= dollar(cost);
+   tax = dollar(tax);
+   shipping = dollar(shipping);
+
+   gtotal = parseFloat(cost) + parseFloat(tax) + parseFloat(shipping);
+   gtotal = dollar(gtotal);
+
+}
+
+
+function dollar(amount)
+{
+   amount = parseFloat(amount);
+   amount = Math.round(parseFloat(amount*100));
+   amount = parseInt(amount);
+   amount = parseFloat(amount/100);
+
+
+   if (((amount) == Math.floor(amount)) && ((amount - Math.floor (amount)) == 0))
+   {
+       amount = amount + ".00"
+       return amount;
+   }
+        
+   if ( ((amount * 10) - Math.floor(amount * 10)) == 0)
+   {
+       amount = amount + "0";
+       return amount;
+   }
+
+   if ( ((amount * 100) - Math.floor(amount * 100)) == 0)
+   {
+       amount = amount;
+       return amount;
+   }
+        
+   return amount;
+}
+
+function resetorder()
+{
+    cost = 0;
+    tax = 0;
+    gtotal = 0;
+    shipping = 0;
+    order ="";
+}
+
+</script>
+
+</head>
+
+<body bgcolor =#99000 text=white link=white vlink=white alink=white>
+
+
+<h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Da Sooner Da Better Store   </h1>
+
+
+<form method="post" name="orderform" enctype="text/plain">
+
+<table border="0">
+    
+<tr>
+<td colspan=2> <input type="checkbox" name="Item1" value="Boomer Sooner Shirt" onclick="tally()"> 
+    <b>Boomer Sooner</b> Shirt ... $14.99
+</td>
+<td colspan=2><input type="checkbox" name="Item2" value="Ride Schooner Ride Flag" onclick="tally()"> 
+   <b>Ride Schooner Ride</b> Flag ... $17.50
+</td>
+</tr>
+
+<tr>
+<td colspan=2><input type="checkbox" name="Item3" value="Upside Down Horns Mug" onclick="tally()"> 
+   <b>Upside Down Horns</b> Mug ... $12.50
+</td>
+<td colspan=2><input type="checkbox" name="Item4" value="Yo Adrian Shirt" onclick="tally()"> 
+   <b>Yo Adrian</b> Jersey ... $35.00
+</td>
+</tr>
+
+<tr>
+<td colspan=2><input type="checkbox" name="Item5" value="Land of Boz Poster" onclick="tally()"> 
+   <b>Land of Boz</b> Poster ... $15.00
+</td>
+<td colspan=2><input type="checkbox" name="Item6" value="Billy Sims Boomer-Q Grill" onclick="tally()"> 
+   <b>Billy Sims Boomer-Q</b> Cooking Grill ... $99.20
+</td>
+</tr>
+
+<tr>
+<td colspan=2><input type="checkbox" name="Item7" value="Bevo Steak Sauce" onclick="tally()"> 
+   <b>"Bevo its whats for Dinner"</b> Steak Sauce ... $5.99
+</td>
+<td colspan=2><input type="checkbox" name="Item8" value="OU Big 12 Champs Again" onclick="tally()"> 
+   <b>OU Big 12 Champs Again</b> Shirt ... $15.77
+</td>
+</tr>
+
+<tr>
+<td colspan=2><input type="checkbox" name="Item9" value="Switzer for Prez" onclick="tally()"> 
+   <b>Switzer for Prez</b> Shirt ... $16.40
+</td>
+<td colspan=2><input type="checkbox" name="Item10" value="Hang Half a Hundred on Em" onclick="tally()"> 
+   <b>Hang Half a Hundred by Half</b> Shirt ... $11.77
+</td>
+</tr>
+
+<tr>
+<td colspan=4><input type="checkbox" name="Item11" value="Sooner Born, Sooner Bred, Sooner Dead then Nebraska Red Shirt" onclick="tally()"> 
+   <b>"Sooner Born, Sooner Bred, Sooner Dead then Nebraska Red"</b> Shirt ... $16.50
+</td>
+</tr>
+
+<tr>
+<td colspan=4><input type="checkbox" name="Item12" value="Who we gonna Woodshed this week" onclick="tally()"> 
+   <b>Who We Gonna Take Behind Da WOODSHED Dis Week</b> CD ... $17.99
+</td>
+</tr>
+
+<tr>
+<td colspan=4> TOTAL: <input type="text" name="total" value="$0" size="10"> </td>
+</tr>
+
+
+    
+<tr>
+      <td align=center>Name:</td>
+      <td>First <input type="Text" name="First" size="10" maxlength="10"> </td>
+      <td colspan=2>Last <input type="Text" name="Last" size="18" maxlength="18"></td>
+</tr>
+
+    <tr>
+      <td align=center>Address:</td>
+      <td colspan=3><input type="Text" name="Address" size="35" maxlength="40"></td>
+    </tr>
+
+    <tr>
+      <td align=center>City:</td>
+      <td colspan=3><input type="Text" name="City" size="20" maxlength="20"> </td>
+
+    </tr>
+
+    <tr>
+    <td align=center> State: </td>
+    <td colspan=3> 
+         <select name="State" size="1">
+         <option value="AL">AL - Alabamiee - Yes we do have electricity
+         <option value="AK">AK - 11,623 Eskimos Can't be wrong
+         <option value="AZ">AZ - But its a dry heat
+         <option value="AR">AR - Litterassy ain't everytang
+         <option value="CA">CA - Californiee - As seen on TV
+         <option value="CO">CO - If you don't ski don't bother
+         <option value="CT">CT - Like MA but the Kennedy's Don't Own it Yet
+         <option value="DE">DE - We like chemicals in our water 
+         <option value="DC">DC - Wanna be Mayor
+         <option value="FL">FL - Ask about our grandkids and voting skills
+         <option value="GA">GA - Georgiee FUN-damentalist Extremism
+         <option value="HI">HI - Aloha(leave) mainlanders and leave your $$
+         <option value="ID">ID - Mr. Potatoe Head State
+         <option value="IL">IL - Please don't pronounce the S
+         <option value="IN">IN - 2 Billlion years tidal wave free
+         <option value="IA">IA - Me so Corny
+         <option value="KS">KS - First Rectangle State
+         <option value="KY">KY - 5 Million People - 7 last names
+         <option value="LA">LA - Let's build a city beneath the sea
+         <option value="ME">ME - Really Cold, but we have Lobster
+         <option value="MD">MD - If you can dream it, we can tax it
+         <option value="MA">MA - Lower taxes than Swenden(most brackets)
+         <option value="MI">MI - 1st line of denfense from the Canadians
+         <option value="MN">MN - 10,000 Lakes and 10^10000 Mosquitoes
+         <option value="MS">MS - Visit and see why the BLUES started here
+         <option value="MO">MO - Mosuuraa Boat Ride in your yard
+         <option value="MT">MT - Home of the Unabomber
+         <option value="NE">NE - CornShuckers
+         <option value="NV">NV - It's Legal Here
+         <option value="NH">NH - Go away and leave us alone
+         <option value="NJ">NJ - The Garbage State
+         <option value="NM">NM - Lizards make great pets
+         <option value="NY">NY - Good Manners is our middle name
+         <option value="NC">NC - Tabaccy is a vegetable
+         <option value="ND">ND - We really are one of the 50 states
+         <option value="OH">OH - At least we're not Michigan
+         <option select value="OK">OK - Like the play, only no singing
+         <option value="OR">OR - Spotted Owl, It's what's for dinner
+         <option value="PA">PA - Cook with Coal
+         <option value="RI">RI - Did you see that, we just past through RI
+         <option value="SC">SC - Civil War:  we didn't actually surrender
+         <option value="SD">SD - Closer than North Dakota
+         <option value="TN">TN - The Educashun State
+         <option value="TX">TX - Si, Hablo Ingeles
+         <option value="UT">UT - Small family of 8 State
+         <option value="VT">VT - We're only cheap in Monopoly
+         <option value="VA">VA - We're Better than West Virginia, Damn it
+         <option value="WA">WA - Help! Overrun by Nerds and Slackers
+         <option value="WV">WV - We're Better than Virginia, Damn it
+         <option value="WI">WI - Come cut the cheese
+         <option value="WY">WY - Flat is where it's at
+         </select>
+
+    </tr>
+
+    <tr>
+      <td align=center>Zip:</td>
+      <td><input type="Text" name="Zip" size="5" maxlength="5"> </td>
+      <td align=right>Phone:</td>
+      <td>
+        <input type="Text" name="Area" size="3" maxlength="3"> 
+        <input type="Text" name="Phone" size="8" maxlength="8">
+      </td> 
+    </tr>
+    
+    <tr>
+      <td align=center>Email Address:</td>
+      <td colspan=3><input type="Text" name="Email" size="30" maxlength="30"></td>
+    </tr>
+
+    <tr> 
+       <td> Shipping: </td>
+       <td> <input type="radio" name="Ship" value=4> UPS Ground </td>
+       <td colspan=2> <input type="radio" name="Ship" value=0 checked>Sooner Schooner Express</td>
+    </tr>
+    <tr>
+       <td>  </td>
+       <td> <input type="radio" name="Ship" value=6>UPS 3 Day </td>
+       <td colspan=2> <input type="radio" name="Ship" value=15>FED EX OVERNIGHT </td>
+    </tr>
+  
+      <tr><td colspan="4" height="3"><hr></td></tr>
+      
+      <tr>
+        <td align="center"><input type="button" Value="Review Order" onclick=revieworder()></td>
+        <td>   </td>
+        <td align="center"><input type="reset" value="Reset Order" onclick=resetorder()></td>
+        <td> </td>
+      </tr>
+      
+      <tr><td colspan="4" height="3"><hr></td></tr>
+      
+  </table>
+
+</form>
+
+<p>
+<br>
+<br>
+<br>
+
+<font size=4 color=yellow>
+Example of how Forms work with JavaScript.  If you are interested in writing dynamic webpages
+sign up for Computer Science I:  Intro to programming using JavaScript.  Final Project:
+<a href='personpage.htm' target=_blank>
+ Make a website 
+</a>
+</font>
+
+
+
+</body>
+</html>
