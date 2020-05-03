@@ -1,0 +1,139 @@
+<html> 
+
+ <head> 
+
+
+
+
+  <!--  
+
+  ***************************************************************************
+  ***************************************************************************
+
+
+        What is the probablility that at least two numbers are the same 
+
+        P(2+ same) = 1 - P(all different)
+                   = 1 - P(1st) and P(2nd) and P(3rd) and ... and p(10th)
+                   = 1 - P(1st)*P(2nd)*P(3rd)* ... *P(10th)
+                   = 1 - (100/100)*(99/100)*(98/100)* ... *(91/100)
+                   = 1 - P(100,10)/100^10
+                   = 1 - (100!/90!)/100^10
+                   = 1 - (99!/90!)/100^9
+                   = 1 - 0.628
+                   = 0.372
+
+   ****************************************************************************
+   ****************************************************************************
+
+  -->
+
+
+
+
+ <title>Output Arrays</title> 
+
+ <style> 
+    span{ text-align: left; 
+          color: white; 
+          font-size: 1.4em; 
+          font-family: Verdana, Geneva, sans-serif; 
+        } 
+ </style> 
+
+ <script> 
+
+ var arr = [];
+
+
+ function makeit() 
+ { 
+    var i, rnum; 
+
+    arr.length = 10; 
+
+    for (i=0; i<=9; i++) 
+    { 
+       rnum = Math.floor(Math.random()*100)+1; 
+       arr[i] = rnum; 
+      
+    } 
+
+ } 
+
+ function sortit()
+ {
+    var temp, small;
+    var i, loc, j;
+
+    for (i=0; i<=8; i++)
+    {
+       loc = i;
+       small = arr[i];
+
+       for (j=i+1; j<=9; j++)
+       {
+          if ( arr[j]<small)
+          {
+             small = arr[j];
+             loc = j;
+          }
+ 
+       }
+
+       temp = arr[i];
+       arr[loc] = temp;
+       arr[i] = small;
+    }
+ }
+
+
+
+ function outit() 
+ { 
+    var i;
+    var tex1; 
+
+    tex1 = ""; 
+
+    for (i=0; i<=9; i++) 
+    {  
+       if ( i != 9 ) 
+       { 
+          tex1 += arr[i] + ", "; 
+       } 
+      else 
+      { 
+          tex1 += arr[i]; 
+      } 
+    } 
+
+    document.getElementById("outarr1").innerHTML = tex1; 
+
+ } 
+
+ </script> 
+
+ </head> 
+
+ <body bgcolor=blue text=white>
+
+ <font size=4 color=yellow>
+
+ Array of 10 Random Numbers 1 to 100: <p>
+ 
+ <button onclick="makeit()"> Click to Create Random Numbers </button> <p>
+ 
+ <button onclick="sortit()"> Click to Sort Random Numbers </button> <p>
+
+ <button onclick="outit()"> Click to Output Random Numbers </button> 
+
+ </font>
+ 
+ <p> <hr> </p>
+
+ <span id = "outarr1"> Array Will Output here When Output Random Numbers Button is Clicked: </span> 
+
+ </body>
+
+ </html> 

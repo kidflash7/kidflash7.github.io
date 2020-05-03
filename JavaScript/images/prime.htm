@@ -1,0 +1,57 @@
+<html>
+<head>
+<title> Prime Time </title>
+
+<script language = "javascript">
+
+var i, max1, start1, end1;
+var cr;
+var prime1;
+
+function primeit()
+{
+   max1=10000;
+   cr="<br>";
+   document.write(2, "<br>");
+   document.write(3, "<br>");
+   
+   for ( i=4; i<=max1; i++ )
+   {
+       end1=Math.round(Math.sqrt(i));
+       start1=1;
+       prime1=true;
+       do
+       {
+           start1=start1+1;
+           if(i%start1==0)
+           {
+               prime1=false;
+           }
+       } while (prime1 && (start1<=end1))
+       if (prime1)
+       {
+           document.write(i, "<br>");
+       }
+   }
+}
+
+
+
+</script>
+</head>
+
+<body bgcolor =#99000 text=white>
+
+
+
+<form name=form1>
+
+<input type="button" value="Click for a list of Prime Numbers" onclick=primeit()>
+
+</font>
+
+
+
+</body>
+</html>  
+

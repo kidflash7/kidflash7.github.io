@@ -1,0 +1,65 @@
+<html> 
+
+ <head> 
+
+ <title>No Dice, Baby</title> 
+
+
+ <script> 
+ 
+ var die1, die2;
+
+
+  function rolldie()
+  {
+        die1 = Math.floor(Math.random()*6)+1; 
+        die2 = Math.floor(Math.random()*6)+1; 
+  }
+
+  function outit()
+  {
+   document.getElementById("outnum1").innerHTML= die1;
+   document.getElementById("outnum2").innerHTML= die2;
+  }
+
+
+  function callfun()
+  {
+     rolldie();
+     outit();
+  }    
+ 
+
+
+
+
+
+
+
+
+
+
+ </script> 
+
+ </head> 
+
+ <body> 
+ 
+ <center>
+
+<font size=6 color=blue>
+
+ <button onclick="callfun()"> Click to Roll Die </button> 
+<p>
+
+
+Die1... <span id="outnum1">  </span> <p>
+Die2... <span id="outnum2">  </span> <p>
+
+</font>
+
+</center>
+
+ </body> 
+
+ </html> 
