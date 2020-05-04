@@ -1,0 +1,149 @@
+<html>
+<head>
+<title> Decision Structures </title>
+</head>
+<body bgcolor=white>
+
+<center>
+<font size=5 color=blue>
+Decision Structures aka Conditional Statements
+<p>
+</font>
+
+<font size=4 color=black>
+Do a series of commands when a certain condition
+is met.
+</font>
+</center>
+<font size="3" color=black>
+
+<b> The If Statement: </b> <p>
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+if (boolean expression) <br>
+{   <br>
+&nbsp; &nbsp; &nbsp;   Statement(s) to be executed if expression is true; <br>
+} 
+</td>
+</tr>
+</table>
+
+<p>
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+if (boolean expression) <br>
+{  <br>
+ &nbsp; &nbsp; &nbsp;  Statement(s) to be executed if expression is true; <br>
+} <br>
+else <br>
+{ <br>
+&nbsp; &nbsp; &nbsp;   Statement(s) to be executed if expression is false; <br>
+}
+</td>
+</tr>
+</table>
+ 
+<p>
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+if (be 1) <br>
+{ <br>
+ &nbsp; &nbsp; &nbsp;  Statement(s) executed if be 1 is true; <br>
+} <br>
+else if (be 2) <br>
+{ <br>
+ &nbsp; &nbsp; &nbsp;  Statement(s) executed if be 1 is false and be 2 is true; <br>
+}
+</td>
+</tr>
+</table>
+
+<p>
+
+<b> Conditional(Boolean) Expressions</b> <p>
+
+Conditional Expressions are either true or false
+The conditional expression will normally make use of the relational 
+and boolean operators <p>
+ 
+<b>The relational operators are</b>: <br>
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+==  equal to --- (a == 10)  <br>
+=== equal value and equal type <br>
+!=  not equal to  --- (b != 5)<br>
+<  less than  --- (c < 9)<br>
+<=  less than or equal to <br> 
+> greater than  <br>
+>= greater than or equal to  <p>
+</td>
+</tr>
+</table>
+
+<b>The boolean operators are</b>: <br>
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+&& and (true when both are true) ( (a>3) && (a<8) )<br> 
+|| or  (true when at least one is true) ( (a<=3) || (a>=8) )<br>
+! not (negation)
+</td>
+</tr>
+</table>
+<p>
+<b> The Switch Statement: </b> <br>
+
+The interpreter checks each case against the value of the variable
+until a match is found (the break statement will end the switch block) 
+If nothing matches, a default condition can be used.
+
+<p>
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+switch (variable) <br>
+{  <br>
+ &nbsp; &nbsp; &nbsp;  case condition 1: statement(s) <br>
+ &nbsp; &nbsp; &nbsp;  break; <p>
+   
+&nbsp; &nbsp; &nbsp;   case condition 2: statement(s)  <br>
+ &nbsp; &nbsp; &nbsp;  break;  <p>
+ 
+&nbsp; &nbsp; &nbsp;   case condition 3: statement(s)  <br>
+ &nbsp; &nbsp; &nbsp;  break; 
+   <br>
+   
+   <b> ... </b>
+   
+   <br>
+
+ &nbsp; &nbsp; &nbsp;  case condition n: statement(s) <br>
+  &nbsp; &nbsp; &nbsp; break; <p>
+   
+&nbsp; &nbsp; &nbsp;   default: statement(s) <br>
+} 
+</td>
+</tr>
+</table>
+
+
+<p>
+
+
+
+
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,220 @@
+
+<html>
+
+<head>
+  
+ <title>Throw Rock</title>
+
+<style>
+
+#container1 
+{
+  width: 900px;
+  height: 310px;
+  position: relative;
+  background: blue;
+}
+#animate1 
+{
+  width: 6px;
+  height: 10px;
+  bottom: 0;
+  position: absolute;
+  background-color: yellow;
+}
+#target1
+{
+   width: 8px;
+   height: 15px;
+   right: 190px;
+   bottom: 0;
+   position: absolute;
+   background-color: red;
+}
+
+</style>
+
+
+<script language="JavaScript">
+
+var i, dis1, angle2, dis5, hit1, diff1, hit5;
+var angle3, vel1, velh, velv, veli, vel2, t;
+var pscale=0.1;
+
+function launch()
+{
+   var elem1 = document.getElementById("animate1");   
+   var posv = 300;
+   var posh = 0;
+   var pos = 0;
+   var st, x, y;
+   var id1 = setInterval(frame1, 7);
+
+   hit5 = " Rock in Air ";
+   document.oform.hint.value = hit5;
+   for(i=0; i<3; i++)
+   {
+      if (oform.ang[i].checked)
+      {
+         angle3 = oform.ang[i].value;
+      }
+   }
+   
+   vel2 = oform.veli.value;
+   angle2 = angle3*(Math.PI/180);
+   velv=vel2*Math.sin(angle2);
+   velh=vel2*Math.cos(angle2);
+   st=velv/16;
+   dis5=velh*st;
+   pscale=700.0/dis1;
+   diff1 = dis5-dis1;
+   dis5=dis5*100;
+   dis5=Math.round(dis5);
+   dis5=dis5/100;
+   document.oform.fdis.value = dis5;
+   if ( (diff1 >= 0) && (diff1 <= 50) )
+   {   hit1 = 1;
+       hit5 = "[<[<**** Target Hit ****>]>]"; 
+   }
+   else 
+   { 
+       hit1 = 0;
+       if (diff1 < 0)
+       { hit5 = " Too Short Sport"; }
+       else { hit5 = " Too Long John"; }      
+   } 
+   if (dis5 < 25)
+   {  hit5 = " Noodle Arm " }
+   
+   t=0;
+
+
+  function frame1() 
+  {
+      if ( (t<=st) && (vel2>0 && vel2<700) )
+      {
+         
+         x=(velh*t)*pscale;
+         y=(-16*t*t+velv*t)*pscale;
+        
+         posv=300-y;
+         posh=x;
+
+         elem1.style.top = posv + 'px'; 
+         elem1.style.left = posh + 'px';
+
+         t=t+0.05;
+       }
+       else
+       {
+          clearInterval(id1); 
+          document.oform.hint.value = hit5;
+       }    
+   
+  }
+
+}
+   
+
+function reset1()
+{
+
+    dis1 = Math.round(Math.random()*9499+501);
+    document.oform.tdis.value = dis1;
+}
+
+function reset2()
+{
+
+   vel2 = 0;
+   angle3 = 0;
+   dis1 = 0;
+   angle2 = 0;
+   velh = 0;
+   velv = 0;
+   hit5 = "Rock Not Thrown Yet";
+   t = 0;
+   dis5 = 0;
+   angle2 = 0;
+   pscale = 0.1;
+   document.oform.veli.value = vel2;
+   document.oform.fdis.value = dis5;
+   document.oform.tdis.value = dis1;
+   document.oform.hint.value = hit5;
+
+}
+
+</script>
+
+</head>
+
+<body bgcolor=#99000 text=white>
+
+<div id ="container1"> 
+<div id ="target1">  </div>
+<div id ="animate1">  </div>
+</div> 
+
+Target is located x feet away, 500&ltx&lt10,000 ..,..
+Hit [Get Target Distance] to begin game <br>
+Type in Initial Velocity and choose the angle of elevation ..,..
+
+Note: Target Distance is the distance to very front of Target <p>
+
+
+<form method="post" name="oform" enctype="text/plain"">
+
+<table border="0">
+    
+    
+    <tr>
+       <td> Target Distance(feet): <input type="text" name="tdis" value="0" size="6">
+        Initial Velocity (ft/sec): <input type="Text" name="veli" value="0" size="6"> 
+      </td>
+    </tr>
+
+
+
+    <tr> 
+       <td> Angle of Elevation: <input type="radio" name="ang" value=30> 30 Degrees 
+   
+                                <input type="radio" name="ang" value=45 checked> 45 Degrees
+    
+                                <input type="radio" name="ang" value=60> 60 Degrees 
+       </td>
+    </tr>
+    
+
+
+    <tr><td><hr></td></tr>
+
+
+    <tr>
+       <td> Distance Traveled (feet): <input type="text" name="fdis" value="0" size="18"></td>
+    </tr>
+
+
+    <tr>
+       <td> Status <input type="text" name="hint" value="Rock Not Thrown Yet" size="25"></td>
+    </tr>
+
+    <tr><td><hr></td></tr>
+
+
+    <tr>
+      <td align="center"><input type="button" value="Get Target Distance" onclick=reset1()>
+
+                          <input type="button" value="Reset Variables" onclick=reset2()>
+
+                          <input type="button" Value="Hit This Button to Throw Rock" onclick=launch()>
+      </td>
+    </tr>
+     
+
+  </table>
+
+</form>
+
+
+</body>
+</html>

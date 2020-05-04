@@ -1,0 +1,74 @@
+<html>
+<head>
+<title> InForm, OutForm </title>
+
+<script>
+
+var num3, num4;
+
+var name;
+
+
+function getinfo()
+{
+  name = document.oform.name1.value;
+  num3 = Number(document.oform.num1.value);
+  num4 = Number(document.oform.num2.value);
+  outstuff();
+}
+
+
+function outstuff()
+{
+   document.oform.oname1.value = name;
+   document.oform.onum1.value = num3+num4;
+   document.oform.onum2.value = num3*num4;
+}
+      
+
+</script>
+
+</head>
+
+<body>
+
+  <form name="oform">
+  
+  <font color=blue>
+  Form - Input: <p>
+  </font>
+  Type Yo Name: <input type="text" name="name1" value=""> <p>
+  Type in Num 1: <input type="number" name="num1" value=0 size="5"> 
+  Type in Num 2: <input type="number" name="num2" value=0 size="5"> 
+ 
+  <p>  
+  <hr>
+  <p>
+   <font color=blue>
+   Form - Output <p>
+   </font>
+   
+   Name: <input type="text" name="oname1" size="40"> <p>
+   
+   Sum: <input type="number" name="onum1" value=0 size="5"> <p>
+   Prod: <input type="number" name="onum2" value=0 size="5"> <p>
+   
+       
+   <hr>
+   <p>
+   <font color=blue>
+   Form - Submit:  Button, Button Who's Got Da Button <p>
+   </font>
+    
+
+    <input type="button" Value="Click It Or Ticket It" onclick=getinfo()>
+    
+
+</form>
+
+
+
+</font>
+</body>
+</html>
+

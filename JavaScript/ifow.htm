@@ -1,0 +1,72 @@
+<html>
+<head>
+<title> InForm, OutGetId </title>
+
+<script>
+
+var num3, num4;
+
+var name;
+
+
+function getinfo()
+{
+  name = document.oform.name1.value;
+  num3 = Number(document.oform.num1.value);
+  num4 = Number(document.oform.num2.value);
+  outstuff();
+}
+
+
+function outstuff()
+{
+   document.getElementById("outname").innerHTML= name;
+   document.getElementById("outnum1").innerHTML= num3+num4;
+   document.getElementById("outnum2").innerHTML= num3*num4;
+}
+      
+
+</script>
+
+</head>
+
+<body>
+
+  <form name="oform">
+  
+  <font color=blue>
+  Form - Input: <p>
+  </font>
+  Type Yo Name: <input type="text" name="name1" value=""> <p>
+  Type in Num 1: <input type="number" name="num1" value=0 size="5"> 
+  Type in Num 2: <input type="number" name="num2" value=0 size="5"> 
+ 
+  <p>  
+  <hr>
+ 
+   Form - Submit:  Button, Button Who's Got Da Button <p>
+  
+   <input type="button" Value="Click It Or Ticket It" onclick=getinfo()>
+    
+  </form>
+
+  <p>
+  <hr>
+
+   <font color=blue>
+   In Page Output with get element by Id <p>
+   </font>
+   
+   Name: <span id="outname"> BillyBob </span> <p>
+   Sum:  <span id="outnum1">  </span> <p>
+   Prod: <span id="outnum2">  </span> <p>
+   
+       
+   <hr>
+   <p>
+   <font color=blue>
+  
+
+</body>
+</html>
+
