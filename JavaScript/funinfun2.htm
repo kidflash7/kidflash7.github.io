@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+<title>Was Yo Function</title>
+
+
+<script>
+
+   var tex1, gnum1, gnum2;
+
+   function getit1()
+   {
+      tex1 = fm1.name1.value;
+      gnum1 = Number(fm1.num1.value);
+      gnum2 = Number(fm1.num2.value);
+      fun1();
+      fun2();
+      outit();
+   }
+
+
+   function fun1()
+   {
+       var a, b;
+       
+       a = 5.25;
+       b = 7;
+       gnum1 = gnum1*gnum1*a;
+       gnum2 = Math.sqrt(gnum1)*b
+   }
+
+   function fun2()
+   {
+      
+      tex1 = "G " + tex1;
+   }  
+
+   function outit()
+   {
+      document.getElementById("gname").innerHTML = tex1; 
+      document.getElementById("out5").innerHTML = gnum1;
+      document.getElementById("out6").innerHTML = gnum2;
+   }
+
+</script>
+
+</head>
+
+<body>
+
+<form name="fm1"> 
+<label> Name: </label>  <input type="text" name="name1"> 
+<label> Num 1: </label>  <input type="number" name="num1">
+<label> Num 2: </label>  <input type="number" name="num2"> 
+</form> 
+<p>
+
+<button onclick="getit1()"> Click It Or Ticket It </button>
+
+
+<p> 
+
+
+<span id = "gname"> G-Name:  </span> <br>
+<span id = "out5"> Num  it 1 </span>  <br>
+<span id = "out6"> Num it 22 </span> 
+
+
+</body>
+</html>

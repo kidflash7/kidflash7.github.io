@@ -1,0 +1,131 @@
+<html>
+<head>
+<title> User Defined Functions </title>
+</head>
+<body bgcolor=white>
+
+<center>
+<font size=5 color=blue>
+User Defined Functions
+<p>
+</font>
+</center>
+
+<font size="3" color=black>
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+
+function fun1(var1, var2) &nbsp; &nbsp;  // var1, var2 optional  <br>
+{  <br>
+   var sum1;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+               &nbsp; &nbsp; &nbsp; &nbsp;// local variable  <br>
+
+   sum1=var1 + var2;  <br>
+    
+   return sum;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// optional   <br>
+
+}
+
+
+</td>
+</tr>
+</table>
+
+<p>
+
+User Defined Functions: <br>
+Reuseable code that can be called anywhere in your program,
+but in order to execute it, it must be called ie
+<b> Math.random(); </b> is a function, all calls to reserved
+words in JavaScript are calls to functions in the Web Browser
+<p> <b>
+JavaScript should be written as a series of functions inside
+the &lthead&gt tag in HTML</b>.  You can call on other Functions
+from within a Function
+<p>
+All your programs from now on should just be calls to functions.
+Check out the following Example
+<p>
+
+
+<font color=blue>
+
+&lthead&gt  <p>
+
+&ltscript&gt  <p>
+
+&lttitle&gt Was Yo Function &lt/title&gt  <p>
+
+
+   var tex1, gnum1, gnum2;   &nbsp; &nbsp; //global variables can be used anywhere<p>
+
+   function getit1()  <br>
+   {  <br>
+      tex1 = fm1.name1.value;  <br>
+      gnum1 = Number(fm1.num1.value);  <br>
+      gnum2 = Number(fm1.num2.value);  <br>
+      fun1();  <br>
+      fun2();  <br>
+      outit();  <br>
+   }  <p>
+
+
+   function fun1()  <br>
+   {  <br>
+       var a, b;   &nbsp; &nbsp; //local variables can only be used in the function <br>
+       
+       a = 5.25;  <br>
+       b = 7;  <br>
+       gnum1 = gnum1*gnum1*a;  <br>
+       gnum2 = Math.sqrt(gnum1)*b;  <br>
+   }  <p>
+
+   function fun2()  <br>
+   {  <br>
+      
+      tex1 = "G-" + tex1 + "Dawg"; <br>
+   }  <p>
+
+   function outit() <br>
+   { <br>
+      document.getElementById("gname").innerHTML = tex1;  <br>
+      document.getElementById("out5").innerHTML = gnum1; <br>
+      document.getElementById("out6").innerHTML = gnum2; <br>
+   } <p>
+
+&lt/script&gt <p>
+
+
+&lt/head&gt <p>
+
+&ltbody&gt  <p>
+
+&ltform name="fm1"&gt  <br>
+&ltlabel&gt Name: &lt/label&gt &nbsp; &ltinput&gt type="text" name="name1"&gt  <br>
+&ltlabel&gt Num 1: &lt/label&gt &nbsp; &ltinput&gt type="number" name="num1"&gt  <br>
+&ltlabel&gt Num 2: &lt/label&gt &nbsp; &ltinput&gt type="number" name="num2"&gt  <br>
+&lt/form&gt
+ 
+<p>
+
+&ltbutton onclick="getit1()"&gt Click It Or Ticket It &lt/button&gt
+
+<p> 
+
+
+&ltspan id = "gname"&gt G-Name:  &lt/span&gt <br>
+
+
+&ltspan id = "out5"&gt Number 1:  &lt/span&gt <br>
+
+&ltspan id = "out6"&gt Number 2:  &lt/span&gt <p>
+
+
+&lt/body&gt <br>
+&lt/html&gt
+
+</body>
+</html>

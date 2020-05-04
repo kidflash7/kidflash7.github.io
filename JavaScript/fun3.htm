@@ -1,0 +1,183 @@
+<html>
+<head>
+<title> User Defined Functions </title>
+</head>
+<body bgcolor=white>
+
+<center>
+<font size=5 color=blue>
+User Defined Functions
+<p>
+</font>
+</center>
+
+<font size="3" color=black>
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+
+function fun1(var1, var2) &nbsp; &nbsp;  // var1, var2 optional  <br>
+{  <br>
+  &nbsp; &nbsp; &nbsp; var sum1;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+               &nbsp; &nbsp; &nbsp; &nbsp;// local variable  <br> <br>
+
+  &nbsp; &nbsp; &nbsp; sum1=var1 + var2;  <br> <br>
+    
+  &nbsp; &nbsp; &nbsp; return sum1;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// optional   <br>
+
+}
+
+
+</td>
+</tr>
+</table>
+
+<p>
+
+User Defined Functions: <br>
+Reuseable code that can be called anywhere in your program,
+but in order to execute it, it must be called i.e.
+<b> Math.random(); </b> is a function, all calls to reserved
+words in JavaScript are calls to functions in the Web Browser
+<p> <b>
+JavaScript should be written as a series of functions inside
+the &lthead&gt tag in HTML</b>.  You can call on other Functions
+from within a Function
+<p>
+All your programs from now on should just be calls to functions: <p>
+<ol>
+<li>
+insert the &ltscript&gt tag in your &lthead&gt tag after the &lttitle&gt tag 
+</li>
+<li>
+declare all your variables
+</li>
+<li>
+function to initialize your variables (i.e. sum = 0;)
+</li>
+<li>
+function to input data
+</li>
+<li>
+function for calculations
+</li>
+<li>
+function to output your results
+</li>
+<li>
+function to call all your functions 
+</li>
+</ol>
+
+
+
+
+<p>
+
+To help you with converting <b>Lab3</b>:
+
+<p>
+<br>
+
+
+<font color=blue>
+
+&lthtml&gt  <p>
+
+&lthead&gt  <p>
+
+&lttitle&gt Sport &lt/title&gt  <p>
+
+
+&ltscript&gt  <p>
+
+
+
+   var fahr; <br>  
+   var sport; <p>
+
+   function input1()  <br>
+   {  <br>
+      
+   &nbsp; &nbsp; &nbsp;   fahr = Number(fm1.num1.value);  <br>
+      
+   }  <p>
+
+
+   function calc1()  <br>
+   {  <br>
+   &nbsp; &nbsp; &nbsp;   sport="Chess";  <p>
+
+    &nbsp; &nbsp; &nbsp;  if ( ( fahr>=0 ) && ( fahr<=30 ) ) <br>
+    &nbsp; &nbsp; &nbsp;  { <br>
+     &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    sport = "Hockey"; <br>
+   &nbsp; &nbsp; &nbsp;   } <p>
+
+    &nbsp; &nbsp; &nbsp;  if ( ( fahr>30 ) && ( fahr<80 ) ) <br>
+     &nbsp; &nbsp; &nbsp; { <br>
+    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;     sport = "Football"; <br>
+   &nbsp; &nbsp; &nbsp;   } <p>
+
+    &nbsp; &nbsp; &nbsp;  if ( ( fahr>=80 ) && ( fahr<=110 ) ) <br>
+     &nbsp; &nbsp; &nbsp; { <br>
+     &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    sport = "Swimming"; <br>
+    &nbsp; &nbsp; &nbsp;  } <p>
+
+   }  <p>
+
+   
+   function output1() <br>
+   { <br>
+      
+   &nbsp; &nbsp; &nbsp;   document.getElementById("out5").innerHTML = fahr; <br>
+   &nbsp; &nbsp; &nbsp;   document.getElementById("out6").innerHTML = sport; <br>
+   } <p>
+
+   function callfun() <br>
+   { <br>
+      
+   &nbsp; &nbsp; &nbsp;   input1(); <br>
+    &nbsp; &nbsp; &nbsp;  calc1(); <br>
+    &nbsp; &nbsp; &nbsp;  output1(); <br>
+      
+   } <p>
+
+
+&lt/script&gt <p>
+
+
+&lt/head&gt <p>
+
+&ltbody&gt  <p>
+
+&ltform name="fm1"&gt  <br>
+
+&ltlabel&gt Temp(F): &lt/label&gt &nbsp; &ltinput type="number" name="num1"&gt  <br>
+
+&lt/form&gt
+ 
+<p>
+&ltp&gt <p>
+
+&ltbutton onclick="callfun()"&gt Click It Or Ticket It &lt/button&gt
+
+<p> 
+&ltp&gt <p>
+
+
+Temp(f):  &ltspan id = "out5"&gt   &lt/span&gt  &ltbr&gt <br>
+
+Sport:  &ltspan id = "out6"&gt   &lt/span&gt <p>
+
+
+&lt/body&gt <br>
+&lt/html&gt
+
+</font>
+
+
+
+</body>
+</html>

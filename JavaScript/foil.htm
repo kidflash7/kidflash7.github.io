@@ -1,0 +1,201 @@
+<html>
+<head><title> TIN FOIL </title>
+
+<script>
+
+var a, b, c, a1, b1, c1;
+var enda, endc;
+var bpos, cpos, found;
+var i, j, outside, inside, facta1, factc1, facta2, factc2;
+var sign1, sign2, output1, output0, cr;
+
+
+function fun1()
+{
+
+   cr="<br>";
+
+   a = Number(document.oform.num1.value); 
+   b = Number(document.oform.num2.value); 
+   c = Number(document.oform.num3.value); 
+
+   found = false;
+
+   if ( a > 0 )
+   {
+      apos = true;
+      a1 = a;
+   }
+   else
+   {
+      a1 = -a;
+      a = -a;
+      b = -b;
+      c = -c;
+      apos = false;
+   }
+
+   if( b >= 0 )
+   {
+       bpos = true;
+       b1 = b;
+   }
+   else
+   {
+      bpos = false;
+      b1 = -b;
+   }
+
+   if( c > 0 )
+   {
+       cpos = true;
+       c1 = c;
+   }
+   else
+   {
+      cpos = false;
+      c1 = -c;
+   }
+
+   enda = a1;
+   endc = c1;
+
+outter1: 
+{
+
+   for ( i=1; i<=enda; i++)
+   {
+       if ( (a1 % i) == 0 )
+       {
+          facta1 = a1 / i;
+          facta2 = a1 / facta1;
+          
+          for ( j=1; j<=endc; j++ )
+          {
+             if ( (c1 % j) == 0 )
+             {
+                factc1 = c1 / j;
+                factc2 = c1 / factc1;
+                outside = facta1 * factc2;
+                inside = facta2 * factc1;
+
+                if ( cpos )
+                {
+                   sum = outside + inside;
+                } 
+                else
+                {
+                   sum = outside - inside;
+                }
+             
+                if ( (sum == b) || (sum == -b) )
+                {
+                   found = true;
+                   break outter1;
+                }
+             }
+          }
+        }
+   }
+}
+
+   if (found)
+   {
+      if (cpos)
+      {
+         if (bpos)
+         {
+            sign1 = "+";
+            sign2 = "+";
+         }
+         else
+         {
+            sign1 = "-";
+            sign2 = "-";
+         }
+      }
+      else
+      {
+         if ( bpos && (outside <= inside) )
+         {
+            sign1 = "+";
+            sign2 = "-";
+         }
+         if ( bpos && ( outside > inside) )
+         {
+            sign1 = "-";
+            sign2 = "+";
+         }
+
+         if ( !bpos && (outside > inside) )
+         {
+            sign1 = "+";
+            sign2 = "-";
+         }
+         if ( !bpos && (outside < inside) )
+         {
+            sign1 = "-";
+            sign2 = "+";
+         }
+       }
+       
+       if ( apos )
+       {
+          output1 = "( "+facta1+"x "+sign1+" "+factc1+" )( "+facta2+"x "+sign2+" "+factc2+" )";
+          output0=a+"x^2 + "+b+"x + "+c+cr;
+       }
+       else
+       {
+          output1 = "-( "+facta1+"x "+sign1+" "+factc1+" )( "+facta2+"x "+sign2+" "+factc2+" )";
+          a = -a;
+          b= -b;
+          c= -c;
+          output0=a+"x^2 + "+b+"x + "+c+cr;
+       }
+   }
+   else
+   {
+       output1 = " Baby ";
+       output0 = " Prime Time ";
+   }     
+   
+   document.getElementById("outnum1").innerHTML= output0;
+   document.getElementById("outnum2").innerHTML= output1;
+}
+
+ 
+</script>
+
+</head>
+
+<body>
+
+
+<p>
+
+<font size=5 color=blue>
+
+
+<form name="oform">
+  
+<p>
+
+Factor:  Ax^2 + Bx + C <br> 
+
+A = <input type="number" name="num1" value=1 size="4">  <br>
+
+B = <input type="number" name="num2" value=1 size="4">  <br>
+
+C = <input type="number" name="num3" value=1 size="4">  <p>
+
+<input type="button" Value="Click to FOIL Factor" onclick=fun1()> <p>
+
+<span id="outnum1"> Aluminium </span> <p>
+<span id="outnum2"> FOIL </span> <p>
+
+
+</font>
+
+
+</body>
+</html>

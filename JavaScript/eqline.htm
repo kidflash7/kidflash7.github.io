@@ -1,0 +1,85 @@
+<html> 
+
+
+
+<head> 
+
+<title> Perfect </title> 
+
+<script> 
+
+var x1, y1, x2, y2, m, b;  
+var delta_y, delta_x;
+var cr;
+
+function init1() 
+{ 
+      cr = "<br>";
+      document.write(" Program will find equation of a line in a plane ", cr);
+      document.write(" Please type in two points on the line:  (x1, y1), (x2, y2) ", cr);
+    
+    
+      x1 = prompt(" Input x1 = ", 0);
+      y1 = prompt(" Input y1 = ", 0);
+      x2 = prompt(" Input x2 = ", 0);
+      y2 = prompt(" Input y2 = ", 0);
+      
+      while ( ( x1 == x2 ) && ( y1 == y2 ) )
+      {
+          x2 = prompt(" Can't be same point:  Input x2 = ", 0);
+          y2 = prompt(" Can't be same point:  Input y2 = ", 0);
+      }
+} 
+
+function calc1() 
+{ 
+    
+    delta_y = y2 - y1;
+    delta_x = x2 - x1;
+
+    if ( delta_x == 0 )
+    {
+        document.write(" Vertical Line:  x = ", x2);
+    }
+    else if ( delta_y == 0 )
+         {
+            document.write(" Horizontal Line:  y = ", y2);
+         }
+         else
+         {
+            m = delta_y / delta_x;
+            b = y1 - m * x1;
+
+            m = Math.round( m * 100 );
+            b = Math.round( b * 100 );
+
+            m = m / 100;
+            b = b / 100;
+
+            document.write(" Equation of Line:  y = ", m, "x + ", b);
+          }
+        
+
+} 
+
+
+function callfun() 
+{ 
+      init1(); 
+      calc1(); 
+} 
+
+</script> 
+
+</head> 
+
+<body> 
+
+<p> 
+
+<button onclick="callfun()"> Click It Or Ticket It </button> 
+
+<p> 
+
+</body> 
+</html> 

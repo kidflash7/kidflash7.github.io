@@ -1,0 +1,74 @@
+<html>
+
+<head>
+
+<title>Mult In/Out Put</title>
+
+<Style>
+   span{ text-align: left; 
+         color: blue; 
+         font-size: 1.5em; 
+         font-family: Verdana, Geneva, sans-serif;
+         border-style: double;
+        }
+</style>
+
+<script>
+
+   var tex1, num1, a, b;
+
+   
+   function outit()
+   {
+      fun1();
+      document.getElementById("outname").innerHTML = tex1; 
+      document.getElementById("outage").innerHTML = num1;
+      document.getElementById("outage2").innerHTML = b;
+   }
+
+   function fun2()
+   {
+       a = a * 5;
+       a = Math.sqrt(a);
+       b = a * a;
+       num1 = a;
+   }
+
+   function fun1()
+   {
+      tex1 = fm1.first.value;
+      a = Number(fm1.age.value);
+      a = a + 10;
+      fun2();
+   }
+
+
+
+   
+
+</script>
+
+</head>
+
+<body>
+
+
+
+<form name="fm1"> 
+<label> Name: </label>  <input type="text" name="first"> 
+<label> Age: </label>  <input type="number" name="age"> <br>
+</form> 
+<p>
+<button onclick="outit()"> Click It Or Ticket It </button>
+
+
+<p> <br>
+
+
+<span id = "outname"> Name in page </span>
+<span id = "outage"> Age in Page </span>
+<span id = "outage2"> Age in Page </span>
+
+
+</body>
+</html>

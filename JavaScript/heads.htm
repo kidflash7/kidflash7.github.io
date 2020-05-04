@@ -1,0 +1,88 @@
+<html>
+<head>
+
+<title> Heads or Tails </title>
+
+<script>
+
+var start, i, rnum, count, heads;
+var tex1, cr;
+
+
+
+function init1()
+{
+      start = Number(document.oform.num1.value); 
+      count = 0;
+      outstuff();
+}
+
+
+function outstuff()
+{
+   heads = 0;
+   for ( i=1; i<=start; i++)
+   {
+        rnum = Math.floor((Math.random()*2)+1);
+        if ( rnum % 2 == 0 )
+        {
+            heads = heads + 1;
+        }
+   }
+   
+   document.oform.onum0.value = count;
+   document.oform.onum1.value = start;
+   document.oform.onum2.value = heads;
+   start = heads;
+   count = count + 1;
+}
+      
+
+</script>
+
+</head>
+
+<body>
+
+  <form name="oform">
+  
+  <font color=blue size=5>
+
+  Da Penny Lab written in JavaScript:
+ 
+    <p>
+
+  How many pennies do you want to start with:
+
+  <input type="number" name="num1" value=100 size="4"> 
+
+   <p>
+   <hr>
+   
+   Trial #.....: <input type="number" name="onum0" value=0 size="4"> <p>
+   # of Pennies: <input type="number" name="onum1" value=0 size="4"> <p>
+   # of Heads..: <input type="number" name="onum2" value=0 size="4"> <p>
+   
+       
+   <hr>
+   <p>
+ 
+   Button, Button Who's Got Da Button <p>
+
+    
+
+    <input type="button" Value="Click this First (Trial 0)" onclick=init1()>
+    <input type="button" Value="Click this for Trial 1, 2, 3, .... " onclick=outstuff()>
+    
+    </font>
+
+    </form>
+
+
+<!--
+
+ Heads You Die Tails I Kill You
+
+-->
+</body>
+</html>
