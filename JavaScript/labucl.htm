@@ -1,0 +1,137 @@
+<html>
+<head>
+<title> Was Yo Function </title>
+</head>
+<body bgcolor=white link=black vlink=red alink=purple>
+
+<center>
+<font size="5" color=black>
+JavaScript:  User Defined Functions
+</font>
+</center>
+
+<p>
+<font size="4" color=blue>
+Upgrade Code Lab: <p>
+Go back to labs 3 & 4 and convert them to proper code 
+using user defined functions
+<p>
+</font>
+<hr>
+<p>
+<font size=4 color=black>
+Write initial programs with simple <b> prompt </b> inputs
+and <b> document.write() </b> outputs, get them working and then
+<b> only if you want </b> you can convert them to form 
+inputs and form outputs or form inputs and page outputs 
+with <b> document.getElementById() </b> see simple examples 
+below to see how it be done.  To view the source code just 
+open the page then right click anywhere on the page and 
+choose view source:
+</font>
+
+<p>
+
+<ul>
+<li> <a href="ifof.htm" target="_blank"> Form Input / Form Output </a> </li>
+<li> <a href="ifow.htm" target="_blank"> Form Input / Page Output </a> </li>
+</ul>
+
+<p>
+I want to put the emphasis on working with data and not on getting the
+data in and out:  input/output 
+
+<p>
+<br>
+<br>
+
+
+
+<font color=green size=4>
+
+&lthtml&gt  <br>
+
+&lthead&gt  <br>
+
+&lttitle&gt Functions &lt/title&gt  <p>
+
+
+&ltscript&gt  <br>
+
+
+
+   var num1, num2; <p>  
+
+   function input1()  <br>
+   {  <br>
+      
+   &nbsp; &nbsp; &nbsp;   num1 = Number(fm1.num01.value);  <br>
+   &nbsp; &nbsp; &nbsp;   num2 = Number(fm1.num02.value);  <br>
+      
+   }  <p>
+
+
+   function sum(x,y)  <br>
+   {  <br>
+   &nbsp; &nbsp; &nbsp;   var add;  <p>
+
+    &nbsp; &nbsp; &nbsp;  add = x + y; <p>
+    &nbsp; &nbsp; &nbsp;  return add; <p>
+
+
+   }  <p>
+
+   
+   function output1() <br>
+   { <br>
+      
+   &nbsp; &nbsp; &nbsp;   document.getElementById("out1").innerHTML = sum(num1, num2); <br>
+ 
+   } <p>
+
+   function callfun() <br>
+   { <br>
+      
+    &nbsp; &nbsp; &nbsp;   input1(); <br>
+    &nbsp; &nbsp; &nbsp;  output1(); <br>
+
+      
+   } <p>
+
+
+&lt/script&gt <p>
+
+
+&lt/head&gt <p>
+
+&ltbody&gt  <p>
+
+&ltform name="fm1"&gt  <br>
+
+&ltlabel&gt Number 1: &lt/label&gt &nbsp; &ltinput type="number" name="num01"&gt  <br>
+&ltlabel&gt Number 2: &lt/label&gt &nbsp; &ltinput type="number" name="num02"&gt  <br>
+
+&lt/form&gt
+ 
+<p>
+&ltp&gt <p>
+
+&ltbutton onclick="callfun()"&gt Click It Or Ticket It &lt/button&gt
+
+<p> 
+&ltp&gt <p>
+
+
+Sum of Numbers:  &ltspan id = "out1"&gt   &lt/span&gt  &ltbr&gt <br>
+
+
+&lt/body&gt <br>
+&lt/html&gt
+
+</font>
+
+
+
+</font>
+</body>
+</html>

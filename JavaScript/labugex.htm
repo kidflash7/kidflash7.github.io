@@ -1,0 +1,86 @@
+<html>
+<head>
+<title> Was Yo Function </title>
+
+<script>
+
+var num3, num4, name2, avg1;
+
+
+function getinfo()
+{
+  name2 = document.oform.name1.value;
+  num3 = Number(document.oform.num1.value);
+  num4 = Number(document.oform.num2.value);
+  dostuff();
+  outstuff();
+}
+
+function dostuff()
+{
+   var big1;
+
+   name2 = "G-"+name2+"-Doggie Dung";
+
+   if (num3>num4)
+   {
+      big1 = num3;
+      num3 = num4;
+      num4 = big1;
+   }
+
+   avg1 = (num3+num4)/2;
+}
+
+function outstuff()
+{
+  document.getElementById("outgname").innerHTML = name2;
+  document.getElementById("outnum1").innerHTML = num4; 
+  document.getElementById("outnum2").innerHTML = num3; 
+  document.getElementById("outavg").innerHTML = avg1;
+}
+      
+
+</script>
+
+</head>
+
+<body>
+
+  <form name="oform">
+  
+  <font color=blue>
+  Form - Input: <p>
+  </font>
+  Type Yo Name: <input type="text" name="name1" value=""> <br>
+  Type in Num 1: <input type="number" name="num1" value="0" size="5"> 
+  Type in Num 2: <input type="number" name="num2" value="0" size="5"> 
+  
+   <p>
+   <hr>
+   <p>
+   <font color=blue>
+   Form - Submit:  Button, Button Who's Got Da Button <p>
+   </font>
+
+    <input type="button" Value="Click It Or Ticket It" onclick=getinfo()>
+    
+
+</form>
+
+<p>
+<hr>
+<p>
+<font color=blue>
+   InPage Output (Not in Form):  <p>
+</font>
+
+Gangsta Name:  <span id = "outgname"> </span> <p>
+Numbers:  <span id = "outnum1"> Yo </span> &ge; <span id = "outnum2"> So </span> <p>
+Mean:  <span id = "outavg"> </span>
+
+
+</font>
+</body>
+</html>
+

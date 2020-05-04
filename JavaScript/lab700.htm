@@ -1,0 +1,226 @@
+<html>
+<head>
+<title> Was Yo Function </title>
+
+<script>
+
+var die1, die2, die3;
+var sum, roll, i, n;
+var sumarr=[];
+
+
+function initarry()
+{
+   sumarr.length = 20;
+   
+   for (i=0; i<=19; i++)
+   {
+      sumarr[i] = 0;
+   }
+}
+
+function rolldie()
+{
+
+  for (i=1; i<=n; i++)
+  {
+      die1 = Math.round(Math.random()*5 + 1);
+      die2 = Math.round(Math.random()*5 + 1);
+      die3 = Math.round(Math.random()*5 + 1);
+      sum = die1 + die2 + die3;
+      sumarr[sum] = sumarr[sum] + 1;
+  }
+
+}
+
+
+
+function outstuff()
+{
+  document.getElementById("outrolls").innerHTML = n;
+  document.getElementById("outarr31").innerHTML = sumarr[3];
+  document.getElementById("outarr32").innerHTML = sumarr[3]/n;
+  document.getElementById("outarr41").innerHTML = sumarr[4];
+  document.getElementById("outarr42").innerHTML = sumarr[4]/n;
+  document.getElementById("outarr51").innerHTML = sumarr[5];
+  document.getElementById("outarr52").innerHTML = sumarr[5]/n;
+  document.getElementById("outarr61").innerHTML = sumarr[6];
+  document.getElementById("outarr62").innerHTML = sumarr[6]/n;
+  document.getElementById("outarr71").innerHTML = sumarr[7];
+  document.getElementById("outarr72").innerHTML = sumarr[7]/n;
+  document.getElementById("outarr81").innerHTML = sumarr[8];
+  document.getElementById("outarr82").innerHTML = sumarr[8]/n;
+  document.getElementById("outarr91").innerHTML = sumarr[9];
+  document.getElementById("outarr92").innerHTML = sumarr[9]/n;
+  document.getElementById("outarr101").innerHTML = sumarr[10];
+  document.getElementById("outarr102").innerHTML = sumarr[10]/n;
+  document.getElementById("outarr111").innerHTML = sumarr[11];
+  document.getElementById("outarr112").innerHTML = sumarr[11]/n;
+  document.getElementById("outarr121").innerHTML = sumarr[12];
+  document.getElementById("outarr122").innerHTML = sumarr[12]/n;
+  document.getElementById("outarr131").innerHTML = sumarr[13];
+  document.getElementById("outarr132").innerHTML = sumarr[13]/n;
+  document.getElementById("outarr141").innerHTML = sumarr[14];
+  document.getElementById("outarr142").innerHTML = sumarr[14]/n;
+  document.getElementById("outarr151").innerHTML = sumarr[15];
+  document.getElementById("outarr152").innerHTML = sumarr[15]/n;
+  document.getElementById("outarr161").innerHTML = sumarr[16];
+  document.getElementById("outarr162").innerHTML = sumarr[16]/n;
+  document.getElementById("outarr171").innerHTML = sumarr[17];
+  document.getElementById("outarr172").innerHTML = sumarr[17]/n;
+  document.getElementById("outarr181").innerHTML = sumarr[18];
+  document.getElementById("outarr182").innerHTML = sumarr[18]/n;
+ 
+}
+
+
+function start1()
+{
+   n = Number(document.rollform.roll.value);
+   initarry();
+   rolldie();
+   outstuff();
+}
+      
+
+</script>
+
+</head>
+
+<body>
+
+  This program will roll three die n times (user will input n).
+  The program will compute the experimental probability of 
+  the sum on the three die (3 to 18)
+
+<form name="rollform">
+  
+  Roll the 3 die <input type="number" name="roll" value="0" size="6"> times
+  
+   <p>
+   <hr>
+   <p>
+
+   <input type="button" Value="Click Here to Roll Die" onclick=start1()>
+    
+
+</form>
+
+<p>
+<hr>
+<p>
+
+<table border=2 cellpading=5 cellspacing=5 bgcolor=yellow>
+
+<tr>
+  <td colspan=3> <span id = "outrolls"> ?? </span>  rolls of 3 die P(Sum)  </td>
+</tr>
+
+<tr>
+  <td> Sum on Die </td>
+  <td> Occurance of Sum </td>
+  <td> Exp Probability </td>
+</tr>
+
+<tr>
+  <td align=center> 3 </td>
+  <td align=center> <span id = "outarr31"> ? </span> </td>
+  <td align=center> <span id = "outarr32"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 4 </td>
+  <td align=center> <span id = "outarr41"> ? </span> </td>
+  <td align=center> <span id = "outarr42"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 5 </td>
+  <td align=center> <span id = "outarr51"> ? </span> </td>
+  <td align=center> <span id = "outarr52"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 6 </td>
+  <td align=center> <span id = "outarr61"> ? </span> </td>
+  <td align=center> <span id = "outarr62"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 7 </td>
+  <td align=center> <span id = "outarr71"> ? </span> </td>
+  <td align=center> <span id = "outarr72"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 8 </td>
+  <td align=center> <span id = "outarr81"> ? </span> </td>
+  <td align=center> <span id = "outarr82"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 9 </td>
+  <td align=center> <span id = "outarr91"> ? </span> </td>
+  <td align=center> <span id = "outarr92"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 10 </td>
+  <td align=center> <span id = "outarr101"> ? </span> </td>
+  <td align=center> <span id = "outarr102"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 11 </td>
+  <td align=center> <span id = "outarr111"> ? </span> </td>
+  <td align=center> <span id = "outarr112"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 12 </td>
+  <td align=center> <span id = "outarr121"> ? </span> </td>
+  <td align=center> <span id = "outarr122"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 13 </td>
+  <td align=center> <span id = "outarr131"> ? </span> </td>
+  <td align=center> <span id = "outarr132"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 14 </td>
+  <td align=center> <span id = "outarr141"> ? </span> </td>
+  <td align=center> <span id = "outarr142"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 15 </td>
+  <td align=center> <span id = "outarr151"> ? </span> </td>
+  <td align=center> <span id = "outarr152"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 16 </td>
+  <td align=center> <span id = "outarr161"> ? </span> </td>
+  <td align=center> <span id = "outarr162"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 17 </td>
+  <td align=center> <span id = "outarr171"> ? </span> </td>
+  <td align=center> <span id = "outarr172"> ? </span> </td>
+</tr>
+
+<tr>
+  <td align=center> 18 </td>
+  <td align=center> <span id = "outarr181"> ? </span> </td>
+  <td align=center> <span id = "outarr182"> ? </span> </td>
+</tr>
+
+
+</table>
+
+</body>
+</html>
+

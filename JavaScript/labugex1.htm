@@ -1,0 +1,71 @@
+<html> 
+
+<head> 
+
+<title> Sport </title> 
+
+<script> 
+
+var fahr; 
+var sport; 
+
+function input1() 
+{ 
+      fahr = Number(fm1.num1.value); 
+} 
+
+function calc1() 
+{ 
+      sport="Chess"; 
+
+      if ( ( fahr>=0 ) && ( fahr<=30 ) ) 
+      { 
+           sport = "Hockey"; 
+      } 
+
+      if ( ( fahr>30 ) && ( fahr<80 ) ) 
+      { 
+           sport = "Football"; 
+      } 
+
+      if ( ( fahr>=80 ) && ( fahr<=110 ) ) 
+      { 
+           sport = "Swimming"; 
+      } 
+
+} 
+
+function output1() 
+{ 
+      document.getElementById("out5").innerHTML = fahr; 
+      document.getElementById("out6").innerHTML = sport; 
+} 
+
+function callfun() 
+{ 
+      input1(); 
+      calc1(); 
+      output1(); 
+} 
+
+</script> 
+
+</head> 
+
+<body> 
+
+<form name="fm1"> 
+<label> Temp(F): </label>   <input type="number" name="num1"> 
+</form> 
+
+<p> 
+
+<button onclick="callfun()"> Click It Or Ticket It </button> 
+
+<p> 
+
+Temp(f): <span id = "out5"> </span> <br> 
+Sport: <span id = "out6"> </span> 
+
+</body> 
+</html> 

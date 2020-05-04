@@ -1,0 +1,35 @@
+<html> 
+ <body> 
+
+ <script type="text/javascript"> 
+
+    var linebreak = "<br />"; 
+    var arr = [];
+    var i;
+    var rnum;
+
+    arr.length = 10;
+
+    
+    for (i=0; i<=9; i++)
+    {
+        rnum = Math.ceil(Math.random()*100);
+        document.write(rnum+",");
+        arr[i] = rnum;
+    }
+
+    document.write(linebreak);
+    document.write(linebreak);
+
+    
+    for (i=0; i<=9; i++)
+    {
+      document.write(arr[i]+",");    
+    
+    }
+        
+   
+ </script> 
+
+ </body> 
+ </html> 

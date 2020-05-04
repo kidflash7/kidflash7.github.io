@@ -1,0 +1,65 @@
+<html> 
+
+
+
+<head> 
+
+<title> Perfect </title> 
+
+<script> 
+
+var i, j, sum, end1, end2;  
+var cr;
+
+function init1() 
+{ 
+      end1 = 10000;
+      cr = "<br>";	
+} 
+
+function calc1() 
+{ 
+    
+    for ( i = 1; i <= end1; i++)
+    {
+       end2 = i - 1;
+       sum = 0;
+
+       for ( j = 1; j <= end2; j++)
+       {
+		if ( i % j == 0 )
+		{
+			sum = sum + j;
+		}
+	}
+	
+	if ( sum == i )
+	{
+		document.write( i );
+		document.write( cr );
+	}
+    }
+
+} 
+
+
+function callfun() 
+{ 
+      init1(); 
+      calc1(); 
+} 
+
+</script> 
+
+</head> 
+
+<body> 
+
+<p> 
+
+<button onclick="callfun()"> Click It Or Ticket It </button> 
+
+<p> 
+
+</body> 
+</html> 

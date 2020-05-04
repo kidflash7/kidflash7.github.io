@@ -1,0 +1,73 @@
+<html>
+
+<head>
+
+<title>Mult In/Out Put</title>
+
+<Style>
+   span{ text-align: left; 
+         color: blue; 
+         font-size: 1em; 
+         font-family: Verdana, Geneva, sans-serif;
+        }
+</style>
+
+
+<script>
+      
+   function outit()
+   {
+
+       var arr = [];
+       var i;
+       var rnum;
+       var tex1, tex2;
+
+       arr.length = 10;
+    
+       tex1 = "<ul>";
+       tex2 = "<ul>";
+    
+       for (i=0; i<=9; i++)
+       {
+           rnum = Math.ceil(Math.random()*100);
+           arr[i] = rnum;
+           tex1 += "<li>" + arr[i] + "</li>";
+ 
+       }
+
+    
+       for (i=0; i<=9; i++)
+       {
+          tex2 += "<li>" + arr[i] + "</li>";
+       }
+
+       tex1 += "</ul>";
+       tex2 += "</ul>";
+   
+       document.getElementById("outarr1").innerHTML = tex1; 
+       document.getElementById("outarr2").innerHTML = tex2;
+
+   }
+
+</script>
+
+</head>
+
+<body>
+
+<p>
+
+<button onclick="outit()"> Click It Or Ticket It </button>
+
+
+<p> <br>
+
+
+<span id = "outarr1"> Array 1: </span>
+<br> <br>
+<span id = "outarr2"> Array 2: </span>
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+
+<head>
+
+<title>Mult In/Out Put</title>
+
+<Style>
+   span{ text-align: left; 
+         color: blue; 
+         font-size: 1.5em; 
+         font-family: Verdana, Geneva, sans-serif;
+         border-style: double;
+        }
+</style>
+
+<script>
+   
+   function outit()
+   {
+      var tex1, num1;
+
+      tex1 = fm1.first.value;
+      num1 = fm1.age.value;
+   
+      document.getElementById("outname").innerHTML = tex1; 
+      document.getElementById("outage").innerHTML = num1;
+   }
+
+</script>
+
+</head>
+
+<body>
+
+<!-- 
+     Multiple Data Input is best done in a HTML FORM.
+     Multiple Data Output is best done in the HTML Webpage
+     itself, with a call to a JavaScript Function making 
+     the use of the doc.getElById("******").inHTML, 
+     because the doc.write command will overwrite the page 
+     and you won't see the input data that is in the form.
+
+     You might think Pop-Up Windows (Prompt) to input data
+     is Klever and Pop-Up windws to display data (Alert) 
+     looks Kool but an efficient and effective webpage is 
+     a page that gets the job done in the most stream line and
+     simpliest way possible, No Bells, No Whistles!  
+
+     Two things Amateurs need to learn and learn quick and 
+     that is Programming (Coding) is MATH, Pre-Calculus with
+     an A is a must to do any real coding, and let's face it
+     getting an A in Pre-Calculus is a Cake Walk compared to 
+     getting an A in the very 1st (REAL) programming course.
+     You actually have to know how to use all the math that
+     you learned in that class.  The second thing you need
+     to learn is that the best code is the code that get's 
+     the job done in the most plain and efficient way possible, 
+     if you want to make Webpages with lots of fancy graphics 
+     and gimics then sign up for Graphic Design.
+-->
+
+<form name="fm1"> 
+<label> Name: </label>  <input type="text" name="first"> 
+<label> Age: </label>  <input type="number" name="age"> <br>
+</form> 
+<p>
+<button onclick="outit()"> Click It Or Ticket It </button>
+
+<!-- Output Data in HTML with call to JavaScript -->
+
+<p> <br>
+
+
+<span id = "outname"> Name in page </span>
+<span id = "outage"> Age in Page </span>
+
+
+</body>
+</html>

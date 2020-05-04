@@ -1,0 +1,153 @@
+<html>
+<head>
+<title> LiveScript - JavaScript </title>
+</head>
+<body bgcolor=white>
+
+<font size=6 color=blue>
+<center>
+<b>JavaScript</b>
+</center>
+<p>
+</font>
+
+<font size="3" color=black>
+
+
+A programming language insterted 
+
+right into webpages to make your webpages dynamic(interactive).  <br>
+
+<ul>
+<lh> Why JavaScript </lh>
+<li> Relevancy to the GUI generation </li>
+<li> No compiler needed, the interpreter is built into your web browser </li>
+<li> Not everyone is gonna get programming, but everyone can get HTML </li>
+</ul>
+
+
+
+
+<p>
+
+<b>JavaScript statements</b> <br> 
+
+are placed within the <b>&ltscript&gt</b> ... <b>&lt/script&gt</b> HTML tags in a 
+
+webpage. <p>
+
+Seperate JavaScript statements with <b>;</b>
+
+
+<p>
+
+<b>Enabling JavaScript in your browser:</b> <br>
+
+
+JavaScript in <b>Internet Explorer</b> <br>
+
+
+Follow Tools ? Internet Options from the menu.
+
+
+Select Security tab from the dialog box.
+
+
+Click the Custom Level button.
+
+
+Scroll down till you find Scripting option.
+
+
+Select Enable radio button under Active scripting.
+
+
+click OK 
+
+<p>
+
+JavaScript in <b> Chrome: </b> <br>
+
+
+Select Settings.
+
+
+Click Show advanced settings at the end of the page.
+
+
+Under the Privacy section, click the Content settings button.
+
+
+In the "Javascript" section, "Allow all sites to run JavaScript".
+
+<p>
+
+<font size=5> <b> Input: </b> </font> Get Data in Program &nbsp; &nbsp; 
+<font size=5> <b> Output: </b> </font> Get Data out of Program <p>
+    
+<b> Basic Output in JS: </b> <p>
+    
+<font size=4 color=blue>
+document.write("How Do ", name);  [Use when testing] <br>
+alert("How Do ", name);  [Pop-Up Window] <br>
+</font>
+Note: Using document.write() after an HTML document is fully loaded, 
+will delete all existing HTML:
+<p>
+<b> Basic Input in JS: </b> <p>
+
+<font size=4 color=blue>
+num1=prompt("Type in a # ", 7);  <p>
+</font>
+
+<!--
+
+<b> Multiple Data Input in HTML-Form</b> <p>
+
+<font size=4 color=blue>
+&ltform name="fm1"&gt  <br>
+&ltlabel&gtFirst Name&lt/label&gt  <br>
+&ltinput type="text" name="first"&gt  <br>
+&ltlabel&gtAge&lt/label&gt  <br>
+&ltinput type="number" name="age"&gt <br>
+&lt/form&gt <p>
+</font>
+
+<b> Data Output in HTML using JavaScript [Final Code]: </b> <p>    
+
+You can either output the data in the HTML-Form: <br>
+
+<font size=4 color=blue>
+    
+document.fm1.first.value = name1;   [line located in JavaScript] <br>
+
+&ltinput type="text" name="first" value="Joe" size="5"&gt  [line located in HTML-Form] <p>
+    
+</font>
+
+or you can output in the actual page itself: <br>
+
+To access an HTML element, JavaScript can use the <b> document.getElementById(id) </b>
+
+method. The id attribute defines the HTML element. The innerHTML property defines 
+
+the HTML content: <p>
+    
+
+    
+<font size=4 color=blue>
+
+&ltp id="p1"&gt <p>
+
+&ltscript&gt <br>
+   var num1=55; <br>
+   document.getElementById("p1").innerHTML = num1; <br>
+&lt/script&gt <br>
+
+</font>
+
+-->
+
+</body>
+</html>
+

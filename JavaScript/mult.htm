@@ -1,0 +1,82 @@
+<html> 
+
+ <head> 
+
+ <title>Mult Table</title> 
+
+
+ <script> 
+ 
+ var e1, num1;
+ var tex2;
+
+ function outit() 
+ { 
+     var i, j, k, tex6, prod1, tex7;
+
+     tex6 = "<br>";
+     tex7 = "&nbsp;";
+     tex2 = tex6;
+     tex2 = tex2 + tex7 + tex7 + tex7  + " * " + tex7 + tex7 + tex7 + "| ";
+     e1 = 5;
+
+
+     for (k=1; k<=e1; k++)
+     {
+        tex2 = tex2 + tex7 + k +  tex7 +  " | " + tex7;
+
+        if ( k==e1 )
+        {
+            tex2 = tex2 + tex6;
+            tex2 = tex2 + "--------------------------------" + tex6;
+        }
+     }
+      
+    
+    
+     for (i=1; i<=e1; i++) 
+     { 
+         tex2 = tex2 + "| " + i ;
+         for (j=1; j<=e1; j++)
+         {
+            prod1=i*j;
+            tex2 = tex2 + tex7 + " | " + prod1;
+            if ( prod1 <= 9 )
+            {
+               tex2 = tex7 + tex7 + tex2 + tex7 + tex7;
+            }
+
+            if ( j==e1 )
+            {
+               tex2 = tex2 + " | " + tex6;
+               tex2 = tex2 + "-------------------------------" + tex6;
+            }
+         }
+     }
+             
+    document.getElementById("outmult").innerHTML = tex2; 
+  }
+ 
+
+ </script> 
+
+ </head> 
+
+ <body> 
+ 
+ <center>
+
+ <button onclick="outit()"> Click It For Mult Table</button> 
+
+
+ <p>
+
+ <font size=3>
+ <p id = "outmult"> </p> 
+ </font>
+
+</center>
+
+ </body> 
+
+ </html> 
