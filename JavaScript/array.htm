@@ -1,0 +1,131 @@
+<html>
+<head>
+<title> Arrays </title>
+</head>
+<body bgcolor=white>
+
+<center>
+<font size=5 color=blue>
+Arrays:  List of variables of the same data type
+<p>
+</font>
+</center>
+
+<font size="3" color=black>
+
+
+
+<table border=1 cellpadding=2>
+<tr>
+<td>
+
+    var arr = []; <br>
+    var i, rnum;        <p>
+
+
+    arr.length = 10; <p>
+
+    
+    for (i=0; i<=9; i++)  <br>
+    {                     <br>  
+   &nbsp; &nbsp; &nbsp;   rnum = Math.ceil(Math.random()*100); <br>
+    &nbsp; &nbsp; &nbsp;    arr[i] = rnum;  <br>
+    }  
+
+</td>
+</tr>
+</table>
+
+The above code first declares an array ( <b> arr = []; </b> )
+and then it declares how many elements are in the arrary ( <b> arr.lenght = 10; </b> )
+the for loop is used to assign a random number to each array element.
+Arrays always start at 0 and go up by one.  If I want to write the 1st
+element in the array <b> document.write( arr[0] ); </b>
+and if I want to write the 10th element in the arrary <b> document.write( arr[9] ); </b>
+Arrays are a nice way to work with a lot of data <p>
+    
+</font>
+
+
+<font size="3" color=blue>
+
+Most efficient way to output an Array is converting it to Text: <p>
+
+&lthtml&gt  <p>
+
+&lthead&gt  <p>
+
+&lttitle&gtOutput Arrays&lt/title&gt <p>
+
+&ltstyle&gt              <br>
+   span{  <br>
+   &nbsp; &nbsp; &nbsp;  text-align: left;           <br>
+   &nbsp; &nbsp; &nbsp;      color: blue;           <br>
+    &nbsp; &nbsp; &nbsp;     font-size: 1em;           <br>
+    &nbsp; &nbsp; &nbsp;     font-family: Verdana, Geneva, sans-serif;          <br>
+        }          <br>
+&lt/style&gt          <p>
+
+
+&ltscript&gt          <p>
+      
+   function outit()           <br>
+   {          <br>
+
+   &nbsp; &nbsp; &nbsp;    var arr = [];          <br>
+   &nbsp; &nbsp; &nbsp;    var i, rnum;          <br>
+
+  &nbsp; &nbsp; &nbsp;     var tex1;          <p>
+
+   &nbsp; &nbsp; &nbsp;    arr.length = 10;          <br>
+    &nbsp; &nbsp; &nbsp;   tex1 = "";          <p>
+    
+    
+    &nbsp; &nbsp; &nbsp;   for (i=0; i<=9; i++)          <br>
+     &nbsp; &nbsp; &nbsp;  {          <br>
+      &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    rnum = Math.ceil(Math.random()*100);          <br>
+       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    arr[i] = rnum;          <br>
+       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    if ( i != 9 )          <br>
+       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    {          <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;      tex1 = tex1 + arr[i] + ", ";          <br>
+         &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  }          <br>
+      &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;     else          <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   {          <br>
+         &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;     tex1 = tex1 + arr[i];          <br>
+       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    }          <br>
+ 
+  &nbsp; &nbsp; &nbsp;     }          <p>
+       
+   
+  &nbsp; &nbsp; &nbsp;     document.getElementById("outarr1").innerHTML = tex1;  <p> 
+
+   }          <p>
+
+&lt/script&gt  <p>
+
+&lt/head&gt <p>
+
+&ltbody&gt 
+
+<p>
+
+&ltbutton onclick="outit()"&gt Click It Or Ticket It &lt/button&gt
+
+
+<p> 
+Output Array of 10 Random Numbers 1 to 100: 
+<p>
+
+
+&ltspan id = "outarr1"&gt Random Array: &lt/span&gt  <p>
+
+
+&lt/body&gt <p>
+&lt/html&gt <p>
+
+</font>
+
+</font>
+</body>
+</html>
+

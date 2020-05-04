@@ -1,0 +1,99 @@
+<html> 
+
+ <head> 
+
+ <title>No Dice, Baby</title> 
+
+
+ <script> 
+ 
+ var  sum = [];
+ var i, j, k, die1, die2, diesum;
+ var prop1, rolls;
+ var br1, font1, sp1;
+ 
+ function init1() 
+ { 
+   
+     sum.length = 15;
+     rolls = 10000000; 
+     br1 = "<br>";
+     sp1 = "&nbsp";
+     font1="<font size=5 color=blue>";  
+  
+     for (i=2; i<=12; i++) 
+     { 
+         sum[i] = 0;
+     }
+             
+    
+  }
+
+  function rolldie()
+  {
+     
+     for (i=1; i<=rolls; i++) 
+     { 
+        die1 = Math.ceil(Math.random()*6); 
+        die2 = Math.ceil(Math.random()*6); 
+        diesum = die1 + die2;
+        sum[diesum] = sum[diesum] + 1;
+        
+     }
+  }
+
+  function outit()
+  {
+     document.write(font1);
+     document.write(" Two Die are Rolled ", rolls , " times ");
+     document.write(br1);
+     document.write(br1);
+     document.write(br1);
+     document.write("| Sum |", sp1," | Occurance | ", sp1, " | Probability | ");
+     document.write(br1);
+     
+
+     for (i=2; i<=12; i++) 
+     { 
+         prop1 = sum[i] / rolls;
+
+         if ( i >= 10 )
+         {   
+            document.write("| ", sp1, i, sp1, sp1, " | "); 
+         }
+         else
+         {
+            document.write("| ", sp1, sp1, sp1, i, sp1, sp1, " | "); 
+         }                
+         document.write("| ", sum[i], " |");
+         document.write("| ", prop1, " |");
+         document.write(br1);
+     }  
+  }
+
+  function callfun()
+  {
+     init1();
+     rolldie();
+     outit();
+  }    
+ 
+
+ </script> 
+
+ </head> 
+
+ <body> 
+ 
+ <center>
+
+ <button onclick="callfun()"> Click to Roll Die </button> 
+<p>
+
+
+
+</center>
+
+ </body> 
+
+ </html> 

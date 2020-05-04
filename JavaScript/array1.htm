@@ -1,0 +1,145 @@
+<html>
+<head>
+<title> Arrays </title>
+</head>
+<body bgcolor=white>
+
+<center>
+<font size=5 color=blue>
+Arrays:  List of variables of the same data type
+<p>
+</font>
+</center>
+
+<font size="3" color=black>
+
+
+
+<table border=2 cellpadding=5>
+<tr>
+<td>
+
+    var arr1 = []; <br>
+    var i, num;        <p>
+
+
+    arr1.length = 10; <p>
+
+    
+    for (i=0; i<=9; i++)  <br>
+    {                     <br>  
+   &nbsp; &nbsp; &nbsp;     num = i + 100; <br>
+    &nbsp; &nbsp; &nbsp;    arr1[i] = num;  <br>
+    }  
+
+</td>
+</tr>
+</table>
+
+The above code first declares an array ( <b> arr1 = []; </b> )
+and then it declares how many elements are in the arrary ( <b> arr1.lenght = 10; </b> )
+the for loop is used to store the numbers 100 to 109 in the array.
+Arrays always start at 0 and go up by one.  If I want to write the 1st
+element in the array <b> document.write( arr1[0] ); </b>
+and if I want to write the 10th element in the arrary <b> document.write( arr1[9] ); </b>
+Arrays are a nice way to work with a lot of data <p>
+    
+</font>
+
+
+<font size="3" color=blue>
+
+
+&lthtml&gt  <p>
+
+&lthead&gt  <p>
+
+&lttitle&gtOutput Arrays&lt/title&gt <p>
+
+
+&ltscript&gt          <p>
+
+ var arr = [];          <br>
+ var i, num;          <p>
+
+
+
+      
+   function input1()           <br>
+   {          <br>
+
+  
+   <p>
+
+   &nbsp; &nbsp; &nbsp;    arr.length = 10;          <br>
+    <p>
+    
+    
+    &nbsp; &nbsp; &nbsp;   for (i=0; i<=9; i++)          <br>
+     &nbsp; &nbsp; &nbsp;  {          <br>
+      &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    num = i + 100;          <br>
+       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    arr[i] = num;          <br>
+
+  &nbsp; &nbsp; &nbsp;     }          <p>
+       
+   
+
+   }          <p>
+
+
+ function output1()           <br>
+   {          <br>
+
+     &nbsp; &nbsp; &nbsp;   for (i=0; i<=9; i++)          <br>
+     &nbsp; &nbsp; &nbsp;  {          <br>
+
+  
+   <p>
+       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    if ( i != 9 )          <br>
+       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    {          <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;      document.write( arr[i], ", " );          <br>
+         &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  }          <br>
+      &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;     else          <br>
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   {          <br>
+         &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;      document.write( arr[i] );         <br>
+       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;    }          <br>
+ 
+ &nbsp; &nbsp; &nbsp;     }          <p>
+
+  }          <p>
+
+   function callfun()           <br>
+   {          <br>
+  
+
+   &nbsp; &nbsp; &nbsp;    input1();          <br>
+   &nbsp; &nbsp; &nbsp;    output1();          <br>
+ 
+
+   }          <p>
+
+
+
+
+&lt/script&gt  <p>
+
+&lt/head&gt <p>
+
+&ltbody&gt 
+
+<p>
+
+&ltbutton onclick="callfun()"&gt Click It Or Ticket It &lt/button&gt 
+
+<p>
+
+
+&lt/body&gt <p>
+&lt/html&gt <p>
+
+</font>
+
+</font>
+</body>
+</html>
+
