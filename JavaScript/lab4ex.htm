@@ -1,0 +1,99 @@
+<html>
+<head>
+<title> Was Yo Function </title>
+
+<script>
+
+var num3, num4, name2, avg1;
+
+
+function getinfo()
+{
+  name2 = document.oform.name1.value;
+  num3 = Number(document.oform.num1.value);
+  num4 = Number(document.oform.num2.value);
+  dostuff();
+  outstuff();
+}
+
+function dostuff()
+{
+   var big1;
+
+   name2 = "G-"+name2+"-Doggie Dung";
+
+   if (num3>num4)
+   {
+      big1 = num3;
+      num3 = num4;
+      num4 = big1;
+   }
+
+   avg1 = (num3+num4)/2;
+}
+
+function outstuff()
+{
+   document.oform.oname1.value = name2;
+   document.oform.onum1.value = num4;
+   document.oform.onum2.value = num3;
+   document.oform.onum3.value = avg1;
+}
+      
+
+function reset1()
+{
+   document.oform.oname1.value = "";
+   document.oform.onum1.value = -1;
+   document.oform.onum2.value = -2;
+   document.oform.onum3.value = (-1-2)/2;
+}
+
+</script>
+
+</head>
+
+<body>
+
+  <form name="oform">
+  
+  <font color=blue>
+  Form - Input: <p>
+  </font>
+  Type Yo Name: <input type="text" name="name1" value=""> <br>
+  Type in Num 1: <input type="number" name="num1" value="0" size="5"> 
+  Type in Num 2: <input type="number" name="num2" value="0" size="5"> 
+  
+  <p>  
+  <hr>
+  <p>
+   <font color=blue>
+   Form - Output <p>
+   </font>
+   
+   Gangsta Name: <input type="text" name="oname1" size="40"> <p>
+   
+   <input type="text" name="onum1" value="0" size="5"> &ge; 
+   <input type="text" name="onum2" value="0" size="5"> <p>
+   
+   Mean: <input type="text" name="onum3" value="0" > <p>
+       
+   <hr>
+   <p>
+   <font color=blue>
+   Form - Submit:  Button, Button Who's Got Da Button <p>
+   </font>
+    
+    <input type="button" value="Reset Variables" onclick=reset1()>
+
+    <input type="button" Value="Click It Or Ticket It" onclick=getinfo()>
+    
+
+</form>
+
+
+
+</font>
+</body>
+</html>
+

@@ -1,0 +1,103 @@
+<html> 
+
+ <head> 
+
+ <title> Loops, Not Hoops </title> 
+
+
+ <script> 
+ 
+    var i, end1, end2;
+    var cr, font1;
+
+
+    function init1()
+    {
+
+       end1 = 20;
+       end2 = 1;
+       cr = "<br>";
+       font1="<font size=6 color=blue>";
+
+    }
+
+
+    function out1() 
+    { 
+        document.write(font1);
+        document.write("Count Up", cr);
+
+        for ( i = 1; i <= end1; i++ )
+        {
+           if ( i != end1)
+           {
+              document.write( i,", ");
+           }
+           else
+           {
+              document.write( i );
+           }
+        }
+     
+        document.write(cr);
+        document.write(cr);
+        document.write("Count Down", cr);
+
+        i = end1;
+
+        while ( i >= end2 )
+        {
+           if ( i == end2)
+           {
+              document.write( i );  
+           }
+           else
+           {
+             document.write( i, ", ");
+           }
+        
+           i = i - 1;
+        }
+     }
+
+    function sum1(a, b)
+    {
+       var j, sum;   // local vars:  a, b, j, sum
+
+       sum = 0;       
+
+       for (j = b; j <= a; j++)
+       {
+          sum = sum + j;
+       }
+     
+       return sum;
+    }
+            
+
+    function callfun()
+    {
+       init1();
+       out1();
+       document.write(cr, cr);
+       document.write(end2, " + ... + ", end1, " = ", sum1(end1, end2));
+    }
+ 
+  </script> 
+
+ </head> 
+
+<body> 
+ 
+<center>
+
+<script>
+   callfun();
+</script>
+
+</center>
+
+
+
+ </body> 
+ </html> 

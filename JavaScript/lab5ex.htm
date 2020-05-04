@@ -1,0 +1,82 @@
+<html> 
+
+ <head> 
+
+ <title> Loops, Not Hoops </title> 
+
+
+ <script> 
+ 
+
+
+ function outit() 
+ { 
+     var i, j, tex1, tex2, end1, end2;
+
+     tex1 = "";
+     tex2 = tex1;
+     end1 = 15;
+     end2 = 1;
+     
+     for ( i = 1; i <= end1; i++ )
+     {
+        if ( i != end1)
+        {
+           tex1 = tex1 + i + ", ";
+        }
+        else
+        {
+           tex1 = tex1 + i;
+        }
+     }
+     
+     j = end1;
+     while ( j >= end2 )
+     {
+        if ( j == end2)
+        {
+           tex2 = tex2 + j;
+        }
+        else
+        {
+           tex2 = tex2 + j + ", ";
+        }
+        
+        j = j - 1;
+     }
+       
+    document.getElementById("countup").innerHTML = tex1;
+    document.getElementById("countdown").innerHTML = tex2; 
+ }
+ 
+ </script> 
+
+ </head> 
+
+ <body bgcolor=blue> 
+ 
+ <center>
+     
+ <font size=6 color=white>
+  Loops
+ </font>
+ 
+
+ <button onclick="outit()"> Click for Count Down/Up </button> 
+
+</center>
+ <p>
+
+ <font size=4 color=white>
+ <hr>
+ Count Down: 
+ <p id = "countdown"> </p> 
+ <hr>
+ Count Up: 
+ <p id = "countup"> </p>
+ </font>
+
+
+ </body> 
+
+ </html> 

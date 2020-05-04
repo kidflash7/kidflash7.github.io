@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title> Simple Simon </title> 
+</head> 
+
+<body> 
+
+<script language="javascript"> 
+
+// declare variables
+
+var tax, income, netincome; 
+var cr; 
+
+// initialize variables
+
+cr = "<br>"; 
+income = 0; 
+
+income = prompt("Type in your Gross Yearly Income ", 0); 
+
+
+switch (true) 
+{ 
+      case income > 50000: 
+          tax = income * 0.85;
+          break; 
+
+      case income > 10000: 
+          tax = 0.15 * (income - 10000) + 1000;
+          break; 
+
+      case income > 0: 
+          tax = income * 0.10; 
+          break;
+
+      default: tax = 0;
+} 
+
+netincome = income - tax;
+
+
+document.write(" Democrates Tax Table ", cr);
+document.write(" Gross Yearly Income =  ", income, cr);  
+document.write(" Yearly taxes = ", tax, cr); 
+document.write(" Net Yearly Income =  ", netincome); 
+
+</script> 
+
+</body> 
+</html> 
+

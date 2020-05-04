@@ -1,0 +1,67 @@
+
+ <html> 
+ <head> 
+ <title> How Do </title> 
+ </head> 
+ <body bgcolor=white text=blue> 
+
+ <center> 
+ JavaScript 123
+ 
+ <p>
+ <font size=6 color=red>
+   Lab 1A Steak Sauce
+ </font>
+ <p>
+ 
+<p>
+<hr>
+<p>
+<font color=blue>
+   Output In da Page:  <p>
+</font>
+
+Num1 (x) = <span id = "outx"> </span>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+Num2 (y) = <span id = "outy">  </span> <br>
+<hr>
+Sum ............  <span id = "outsum"> </span> <br>
+Difference 1 ...  <span id = "outdiff1"> </span> <br>
+Difference 2 ...  <span id = "outdiff2"> </span> <br>
+Product ........  <span id = "outprod"> </span> <br>
+Division 1 .....  <span id = "outdiv1"> </span> <br>
+Division 2 .....  <span id = "outdiv2"> </span> <br>
+
+</center> 
+
+
+ <script>
+
+  var x, y, sum, prod, diff1;
+  var diff2, div1, div2;
+  
+  x = prompt("Type in Number 1 ... ", "0");
+  y = prompt("Type in Number 2 ... ", "0"); 
+  
+  diff1 = x - y;
+  diff2 = y - x;
+  sum = Number(x) + Number(y);
+  prod = x * y;
+  div1 = x / y;
+  div2 = y / x;
+
+  document.getElementById("outx").innerHTML = x;
+  document.getElementById("outy").innerHTML = y;
+  document.getElementById("outsum").innerHTML = sum;
+  document.getElementById("outdiff1").innerHTML = diff1; 
+  document.getElementById("outdiff2").innerHTML = diff2; 
+  document.getElementById("outprod").innerHTML = prod;
+  document.getElementById("outdiv1").innerHTML = div1;
+  document.getElementById("outdiv2").innerHTML = div2;
+
+ </script>
+
+
+</body> 
+</html> 
+
