@@ -1,0 +1,62 @@
+<html> 
+
+<head> 
+
+<title>Output Arrays</title> 
+
+<script> 
+
+var arr = []; 
+var i, num; 
+
+function input1() 
+{ 
+
+
+      arr.length = 10; 
+
+
+      for (i=0; i<=9; i++) 
+      { 
+           num = i + 100; 
+           arr[i] = num; 
+      } 
+
+} 
+
+function output1() 
+{ 
+      for (i=0; i<=9; i++) 
+      { 
+
+
+           if ( i != 9 ) 
+           { 
+                document.write( arr[i], ", " ); 
+           } 
+           else 
+           { 
+                document.write( arr[i] ); 
+           } 
+      } 
+
+} 
+
+function callfun() 
+{ 
+      input1(); 
+      output1(); 
+} 
+
+</script> 
+
+</head> 
+
+<body> 
+
+<button onclick="callfun()"> Click It Or Ticket It </button> 
+
+</body> 
+
+</html> 
+

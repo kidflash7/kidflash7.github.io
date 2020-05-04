@@ -1,0 +1,72 @@
+<html> 
+
+ <head> 
+
+ <title>Output Arrays</title> 
+
+ <style> 
+    span{ text-align: left; 
+          color: white; 
+          font-size: 1.4em; 
+          font-family: Verdana, Geneva, sans-serif; 
+        } 
+ </style> 
+
+ <script> 
+
+ function outit() 
+ { 
+    var arr = []; 
+    var i, rnum, tex1; 
+
+
+    arr.length = 10; 
+    tex1 = ""; 
+
+/*
+*  Math.random();                    gives a decimal from 0-0.9999
+*  Math.random()*20;	             gives a decimal form 0-19.9998
+*  Math.floor(Math.random()*20);     gives a whole number from [0,19]
+*  Math.floor(Math.random()*20)+1;   gives a whole number fr0m [1,20]
+*  Math.floor(Math.random() * (max - min + 1)) + min;   gives a whole number from [min,max]
+*/
+
+
+    for (i=0; i<=9; i++) 
+    { 
+       rnum = Math.floor(Math.random()*100)+1; 
+       arr[i] = rnum; 
+       
+       if ( i != 9 ) 
+       { 
+          tex1 += arr[i] + ", "; 
+       } 
+      else 
+      { 
+          tex1 += arr[i]; 
+      } 
+    } 
+
+    document.getElementById("outarr1").innerHTML = tex1; 
+
+ } 
+
+ </script> 
+
+ </head> 
+
+ <body bgcolor=blue text=white>
+
+ <font size=4 color=yellow>
+ Array of 10 Random Numbers 1 to 100: 
+ 
+ <button onclick="outit()"> Click to Call Function </button> 
+ </font>
+ 
+ <p> <hr> </p>
+
+ <span id = "outarr1"> Array Will Output Here When Button is Clicked: </span> 
+
+ </body>
+
+ </html> 

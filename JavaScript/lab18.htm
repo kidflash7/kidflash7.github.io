@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> Labs 19-20 </title>
+</head>
+<body text=white>
+<center>
+<font size="5" color=blue>
+
+Lab 19: Approximate Pi by Finding Area Under The Curve
+</font>
+</center>
+<font size='4' color='black'>
+<p>
+Approximate Pi by finding the area under the curve of the Unit Circle 
+The equation of the Unit Circle is: x<sup>2</sup> + y<sup>2</sup> = 1 
+I would find the area of the circle in the 1<sup>st</sup> Quadrant and 
+multiply by 4.  To approximate this area divide the region into n Trapezoids 
+of equal width(1/n) and add them all up, the user will type in n. <br>
+<center>
+<img src = "images/area5.png"  width=400> 
+</center>
+</font>
+<p>
+
+
+<br><br>
+<center>
+
+<font size="5" color=blue>
+
+Lab 20: Approximate Roots of a 3<sup>rd</sup> Degree Poly
+</font>
+<p>
+
+</center>
+<font size='4' color='black'>
+<p>
+Approximate the root of a 3<sup>rd</sup> degree polynomial function that has 
+real roots using the bisection method.  User will input coefficents(a, b, c, d) 
+for the 3<sup>rd</sup> degree polynomial function:  ax<sup>3</sup> + bx<sup>2</sup> +
+cx + d = 0.
+The user will also have to input two integers (m, n) such that they know a root 
+and only one root exists between these two x-values.  I know a root exists between 
+m and n if f(m)>0 and f(n)<0 or f(m)<0 and f(n)>0.  
+Bisection Method:  Let's assume: n>m and f(m)<0 and f(n)>0 a good guess for the root 
+is halfway between m and n:  mid1 = (m + n)/2  now if f(mid1)>0 you have a new n 
+but if f(mid1)<0 then you have a new m now test to see if abs(m-n) < error 
+if it isn't repeat this process until abs(m-n) < error then output f(m) or f(n) 
+Note:  error is what you decide it to be in your program  i.e. error=0.0001 this will 
+produce a root accurate to 3 places past the decimal.
+
+</font>
+
+
+</center>
+
+<br>
+
+
+
+</body>
+</html>
