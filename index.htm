@@ -2,8 +2,7 @@
 <head>
 <title> Alexander </title> 
 
-<link rel="shortcut icon" type="image/x-icon" href="images/o1.png">
-
+<link rel="shortcut icon" type="image/x-icon" href="images/losminer7.png">
 
 
 <style type="text/css">
@@ -41,18 +40,31 @@ a:hover{font:Trebuchet MS, Georgia; color:white; background-color:black; text-de
 
 
 <script>
-
-     var date1 = Date.UTC(2020, 07, 24);
+     
+     var d = new Date();
+     var n1 = d.getFullYear();
+     var n2 = d.getMonth();
+     var date1 = Date.UTC(2021, 00, 18);
      var date2 = Date.now();
      var diff, weeks;
-     var font1;
+     var font1, sem;
 
      diff = date2 - date1;
      weeks = Math.ceil( (diff/(86400000*7) ));
      font1 = "<font size=4 face='Comic Sans MS' color=#d60000>";
+     if( n2 < 7)
+     {
+        sem = "Spring";
+     }
+     else
+     {
+        sem = "Fall";
+     }
      document.write(font1);
-     document.write("Fall 2020 Week ");
-     document.write(weeks);
+     document.write(sem, " ", n1);
+     document.write(" Week ", weeks);
+     
+    
 
 </script>
 
@@ -257,7 +269,7 @@ a:hover{font:Trebuchet MS, Georgia; color:white; background-color:black; text-de
 
 
  <font size="2" color="black" face="Verdana">
- <a href="tacobell.pdf" target=_blank>
+ <a href="http://yhs-yuhsd-ca.schoolloop.com/file/1500178972691/1397285117544/8241516457459234826.pdf?filename=2019+YHS+Bell+Schedule+%5BLetter%5D.pdf" target=_blank>
    Bell Schedule
  </a>
  </font>
